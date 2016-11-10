@@ -2,7 +2,7 @@
 
 API for the CEIBA's data-portal
 
-Spanish version [README.md]
+## [Spanish version](README.md)
 
 ## Introduction
 
