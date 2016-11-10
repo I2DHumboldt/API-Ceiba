@@ -1,9 +1,10 @@
 # API-Ceiba
-API para el portal de datos CEIBA del instituto Humboldt
 
-English version [README_ENG.md]
+API for the CEIBA's data-portal
 
-## Introducción
+Spanish version [README.md]
+
+## Introduction
 
 Esta API es una implementación del portal de datos de SIB Colombia a la que se le han agregado algunas modificaciones. Para comenzar vamos a hacer describir los pasos para reproducir esta API sin ninguna modificación para el portal de datos de CEIBA
 
