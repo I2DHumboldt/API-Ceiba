@@ -5,15 +5,14 @@
 
 const fs = require('fs');
 const xml2js = require('xml2js');
-const occurrenceMapper = require("./../config/occurrenceMapper.json");
-const emlMapper = require("./../config/emlMapper.json");
 
 /**
  * This function converts the given occurrence.txt in a JSON.
  * The fields and names are given by the DwacMapper
  * @param filename
+ * @param mapper
  */
-function occurrenceConverter(filename) {
+function occurrenceConverter(filename, mapper) {
     let lines = fs.readFileSync(filename).toString().split('\n');
     let head = (lines.splice(0, 1))[0].split("\t");//Get the header
 
@@ -21,7 +20,7 @@ function occurrenceConverter(filename) {
     let result = new Array(lines.length);
     //Convert column names to column indexes and alias
     head.forEach(function(value, index) {
-        var alias = occurrenceMapper[value];
+        var alias = mapper[value];
         if(alias) {
             column2Alias[index] = alias;
         }
@@ -44,8 +43,9 @@ function occurrenceConverter(filename) {
 /**
  * This function converts the eml.xml file in a JSON
  * @param filename
+ * @param mapper
  */
-function emlConverter(filename) {
+function emlConverter(filename, mapper) {
     let  parser = new xml2js.Parser();
     let content = fs.readFileSync(filename).toString();
     var data = {}
@@ -56,7 +56,7 @@ function emlConverter(filename) {
 
     //Get the fields specified in the emlMapper.json
     let result = {};
-    emlParse(emlMapper, data, result);
+    emlParse(mapper, data, result);
 
     return result;
 }
@@ -103,8 +103,9 @@ function emlParse(mapper, data, output){
 /**
  * This function converts the meta.xml in a JSON
  * @param filename
+ * @param mapper
  */
-function metaConverter(filename){
+function metaConverter(filename, mapper){
     let  parser = new xml2js.Parser();
     let content = fs.readFileSync(filename).toString();
     var data = {};
@@ -116,53 +117,41 @@ function metaConverter(filename){
 }
 
 /**
- * @TODO Implement this function!!!!
- * This function converts the given occurrence_extension in a JSON.
- * It includes all the tuples of the file
- * @param filename
- */
-function extensionConverter(filename) {
-    let lines = fs.readFileSync(filename).toString().split('\n');
-    let head = lines.splice(0, 1).split("\t");//Get the header
-    return [];
-}
-
-/**
  * This function reads and parses the content of a Dwac folder.
  * @param folder
  * @param options
  */
-function loadFromFolder(dirname, opt) {
-    let options = Object.assign({meta: false, extensions: false}, opt);
+function loadFromFolder(dirname, toParse) {
 
     if( !dirname.endsWith("/") )
         dirname += "/";
     var files = fs.readdirSync(dirname);
     let result = {};
     files.forEach(function(f) {
-        switch(f) {
-            case "occurrence.txt":
-                result[f] = occurrenceConverter(dirname+f);
-                break;
-            case "eml.xml":
-                result[f] = emlConverter(dirname+f);
-                break;
-            case "meta.xml":
-                if(options.meta) {
-                    result[f] = metaConverter(dirname+f);
-                }
-                break;
-            case "occurrence_extension.txt":
-                if(options.extensions) {
-                    //@TODO include extensions files
-                    result[f] = extensionConverter(dirname+f);
-                }
-                break;
+        for( let name in toParse){
+            if(f === name) {
+                let procs = toParse[name];
+                procs.forEach(function(process) {
+                    switch(f) {
+                        case "occurrence.txt":
+                            result[process["key"]] = occurrenceConverter(dirname+f, process["mapper"]);
+                            break;
+                        case "eml.xml":
+                            result[process["key"]] = emlConverter(dirname+f, process["mapper"]);
+                            break;
+                        case "meta.xml":
+                            result[process["key"]] = metaConverter(dirname+f, process["mapper"]);
+                            break;
+                        case "occurrence_extension.txt":
+                            result[process["key"]] = occurrenceConverter(dirname+f, process["mapper"]);
+                            break;
+                    }
+                });
+            }
         }
     });
 
     return result;
-
 }
 
 module.exports = {loadFromFolder}
