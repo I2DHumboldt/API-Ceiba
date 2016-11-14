@@ -13,6 +13,8 @@ const filterOccurrence = require("./filters/occurrence");
 const filterOccResource = require("./filters/occResource");
 const filterResource = require("./filters/resource");
 
+const publisher = require("./../config/publisher.json");
+
 const clientElastic = new elasticsearch.Client({
     host: process.env.ESDBHOST
 });
@@ -25,7 +27,7 @@ let dwac = dwacParser.loadFromFolder(__dirname+"/../data-test/resource/dwca-sanp
 let occResource = filterOccResource(dwac["occResource"]);
 let occurrence = dwac["occurrence"];
 let resource = filterResource(dwac["resource"]);
-
+console.log(occResource);
 //Add the missing fields and transform fields
 var sourcefileid = "";
 let rgpId = occResource["resource_gbif_package_id"];
@@ -39,21 +41,40 @@ else{
     console.log("Could not determine the sourcefileid");
     return;
 }
+
+clientElastic.create({
+    index: 'sibdataportal',
+    type: 'resource',
+    method: 'post',
+    id: sourcefileid,
+    body: resource
+}, function (error, response) {
+    //@TODO Sent to logger
+    if(error) {
+        console.log("Saving resource: ", error);
+    }
+    else {
+        //console.log(response);
+    }
+});
+
 occurrence.forEach(function(doc) {
     doc = filterOccurrence(doc);
     doc["sourcefileid"] = sourcefileid;
-    let occurrenceDoc = Object.assign(occResource, doc);
+    let occurrenceDoc = Object.assign(occResource, publisher, doc);
+    //console.log(occurrenceDoc)
     clientElastic.create({
         index: 'sibdataportal',
         type: 'occurrence',
-        method: 'post',
         id: doc["occurrenceid"],
         body: occurrenceDoc
     }, function (error, response) {
-        if(error)
-            console.log(error);
-        else
-            console.log(response);
-
+        //@TODO Sent to logger
+        if(error) {
+            console.log("Saving occurrence: ", error);
+        }
+        else{
+            //console.log(response);
+        }
     });
-});
+})

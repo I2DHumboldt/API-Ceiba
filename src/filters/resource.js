@@ -22,25 +22,37 @@ module.exports = function(resource){
     }
 
     resource["contact"] = [];
-    if(resource["resource_creator"]) {
-        resource["resource_creator"].rol = "resource_creator"
-        resource["contact"].push(resource["resource_creator"]);
-        delete resource["resource_creator"];
-    }
-    if(resource["metadata_provider"]) {
-        resource["metadata_provider"].rol = "metadata_provider"
-        resource["contact"].push(resource["metadata_provider"]);
-        delete resource["metadata_provider"];
-    }
-    if(resource["agent"]) {
-        resource["agent"].rol = "agent"
-        resource["contact"].push(resource["agent"]);
-        delete resource["agent"];
-    }
-    if(resource["resource_contact"]) {
-        resource["resource_contact"].rol = "contact"
-        resource["contact"].push(resource["resource_contact"]);
-        delete resource["resource_contact"];
+    contactFilter(resource, "resource_creator",  "resource_creator");
+    contactFilter(resource, "metadata_provider",  "metadata_provider");
+    contactFilter(resource, "agent",  "agent");
+    contactFilter(resource, "resource_contact",  "contact");
+
+    return resource;
+}
+
+function contactFilter(resource, contact, rol) {
+    var field = resource[contact];
+    if(field) {
+        field.rol = rol;
+        field.publisher_fkey = "05b001e7-f903-4925-a679-205329408d01";
+        resource["contact"].push(field);
+        delete resource[contact];
+
+/*        field.name = field["individualName"]["givenName"]+" "+field["individualName"]["surName"];
+        field.position_name = field["positionName"];
+        field.organization_name = field["organizationName"];
+        field.city = field["address"]["city"];
+        field.administrative_area = field["address"]["administrativeArea"];
+        field.country = field["address"]["country"];
+        field.postal_code = field["address"]["postalCode"];
+        field.address = field["address"]["deliveryPoint"]
+        field.email = field["electronicMailAddress"];
+        delete field["individualName"];
+        delete field["positionName"];
+        delete field["organizationName"];
+        delete field["electronicMailAddress"];
+*/
+
     }
 }
 

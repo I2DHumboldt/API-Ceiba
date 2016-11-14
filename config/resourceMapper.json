@@ -17,10 +17,83 @@
       {"keyword":"keyword"},
       {"keywordThesaurus": "keyword_thesaurus"}
     ],
-    "creator": "resource_creator",
-    "metadataProvider": "metadata_provider",
-    "associatedParty": "agent",
-    "contact": "resource_contact"
+    "creator": {
+      "->": "resource_creator",
+      "mapper": {
+        "individualName": {
+          "givenName": "name",
+          "surName": "surname"
+        },
+        "positionName": "position_name",
+        "organizationName": "organization_name",
+        "address": {
+          "city": "city",
+          "administrativeArea": "administrative_area",
+          "country": "country",
+          "postalCode": "postal_code",
+          "address": "deliveryPoint"
+        },
+        "electronicMailAddress": "email",
+        "phone": "phone"
+      }
+    },
+    "metadataProvider": {"->":"metadata_provider",
+      "mapper": {
+        "individualName":{
+          "givenName": "name",
+          "surName": "surname"
+        },
+        "positionName": "position_name",
+        "organizationName": "organization_name",
+        "address":{
+          "city":"city",
+          "administrativeArea": "administrative_area",
+          "country": "country",
+          "postalCode": "postal_code",
+          "address": "deliveryPoint"
+        },
+        "electronicMailAddress": "email",
+        "phone": "phone"
+      }
+    },
+    "associatedParty": {"->":"agent",
+      "mapper":{
+        "individualName":{
+          "givenName": "name",
+          "surName": "surname"
+        },
+        "positionName": "position_name",
+        "organizationName": "organization_name",
+        "address":{
+          "city":"city",
+          "administrativeArea": "administrative_area",
+          "country": "country",
+          "postalCode": "postal_code",
+          "address": "deliveryPoint"
+        },
+        "electronicMailAddress": "email",
+        "phone": "phone"
+      }
+    },
+    "contact": {"->":"resource_contact",
+      "mapper": {
+        "individualName":{
+          "givenName": "name",
+          "surName": "surname"
+        },
+        "positionName": "position_name",
+        "organizationName": "organization_name",
+        "address":{
+          "city":"city",
+          "administrativeArea": "administrative_area",
+          "country": "country",
+          "postalCode": "postal_code",
+          "address": "deliveryPoint"
+        },
+        "electronicMailAddress": "email",
+        "phone": "phone"
+      }
+    }
   },
   "additionalMetadata": {
     "metadata": {

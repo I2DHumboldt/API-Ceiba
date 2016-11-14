@@ -91,6 +91,16 @@ function emlParse(mapper, data, output){
                 });
             } else if(typeof mapper === "object") {
                 for(let key in mapper ) {
+                    if(key === "->") {
+                        if(!output[mapper[key]]) {
+                            //Create a new level in the output
+                            let newLevel = {};
+                            output[mapper[key]] = newLevel;
+                            delete mapper[key];
+                            emlParse(mapper["mapper"], data, newLevel);
+                        }
+                        break;
+                    }
                     if(data[key]) {
                         emlParse(mapper[key], data[key], output);
                     }
