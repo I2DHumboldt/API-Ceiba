@@ -1,29 +1,40 @@
 {
   "name": "api-ceiba",
   "version": "0.0.1",
-  "repository": {
+  "author": "Andrés Castillo",
+  "repository":{
     "type": "git",
     "url": "https://github.com/I2DHumboldt/API-Ceiba.git"
   },
   "scripts": {
-    "eslint": "eslint src test",
+    "eslint": "eslint src --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "test": "npm run test-mocha",
-    "test-mocha": "mocha --require should --reporter mocha-better-spec-reporter --recursive",
-    "test-cov": "istanbul cover node_modules/.bin/_mocha -- --require should --reporter dot --recursive",
-    "test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- --require should --reporter dot --recursive"
+    "test-mocha": "mocha --compilers js:babel-register --require should --reporter mocha-better-spec-reporter --recursive src/**/__tests__/**/*.js",
+    "test-cov": "istanbul cover _mocha -- --compilers js:babel-register --require should --reporter dot --recursive src/**/__tests__/**/*.js",
+    "test-travis": "istanbul cover _mocha --report lcovonly -- --compilers js:babel-register --require should --reporter mocha-better-spec-reporter --recursive src/**/__tests__/**/*.js && npm run eslint"
   },
   "devDependencies": {
+    "babel-cli": "^6.2.0",
+    "babel-core": "^6.2.1",
+    "babel-plugin-transform-es2015-block-scoping": "^6.1.18",
+    "babel-preset-es2015-node4": "^2.0.1",
+    "babel-register": "^6.2.0",
+    "babelify": "^7.2.0",
+    "babili": "0.0.8",
     "eslint": "^3.4.0",
-    "eslint-config-cheminfo": "^1.2.0",
+    "eslint-config-cheminfo": "^1.4.0",
     "eslint-plugin-no-only-tests": "^1.1.0",
-    "istanbul": "^0.4.4",
+    "istanbul": "^1.0.0-alpha",
     "mocha": "^3.0.2",
     "mocha-better-spec-reporter": "^3.0.2",
     "should": "^11.1.0"
   },
   "dependencies": {
-    "xml2js": "^0.4.17"
+    "xml2js": "^0.4.17",
+    "elasticsearch": "^12.0.1",
+    "async": "^2.1.2",
+    "lodash": "^4.16.6"
   }
 
 }

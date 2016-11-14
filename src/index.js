@@ -2,4 +2,4 @@
 /**
  * Created by acastillo on 11/13/16.
  */
-module.exports.DwacParser = require('./DwacParser');
+module.exports.dwacParser = require('./dwacParser');

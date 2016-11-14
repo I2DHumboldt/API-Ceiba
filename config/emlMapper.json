@@ -1,0 +1,37 @@
+{
+  "$":{
+    "packageId": "resource_id"
+  },
+  "dataset":{
+    "title": {"_": "resource_title" },
+    "abstract": {
+      "para": "resource_description"
+    },
+    "intellectualRights": {
+      "para": "resource_intellectual_rights"
+    },
+    "pubDate": "resource_publication_date",
+    "alternateIdentifier": "resource_alternate_identifier",
+    "language": "resource_language",
+    "keywordSet": [
+      {"keyword":"resource_keyword"},
+      {"keywordThesaurus": "resource_keyword_thesaurus"}
+    ]
+  },
+  "additionalMetadata": {
+    "metadata": {
+      "gbif": {
+        "citation": {
+          "_": "resource_citation"
+        },
+        "resourceLogoUrl": "resource_logo_url",
+        "dc:replaces": "resource_gbif_package_id",
+        "hierarchyLevel": "resource_hierarchy_level",
+        "collection": {
+          "collectionIdentifier": "collection_identifier",
+          "collectionName": "collection_name"
+        }
+      }
+    }
+  }
+}
