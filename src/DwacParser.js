@@ -5,7 +5,8 @@
 
 const fs = require('fs');
 const xml2js = require('xml2js');
-
+const set = require('set-value');
+const get = require('get-value');
 /**
  * This function converts the given occurrence.txt in a JSON.
  * The fields and names are given by the DwacMapper
@@ -23,19 +24,26 @@ function occurrenceConverter(filename, mapper) {
         var alias = mapper[value];
         if(alias) {
             column2Alias[index] = alias;
+            if(Array.isArray(alias)){
+                column2Alias[index] = alias.join(".")
+            }
         }
     });
     //Convert each row in a JSON and return;
     let collection = lines.map(function(row, index) {
         let columns = row.split("\t");
-        let doc = {};
-        //@TODO Change forEach by a for loop
-        columns.forEach(function(value, index) {
-            if(column2Alias[index] && value) {
-                doc[column2Alias[index]] = value;
-            }
-        });
-        return doc;
+        if(columns.length > 1){
+            let doc = {};
+            //@TODO Change forEach by a for loop
+            columns.forEach(function(value, index) {
+                let alias = column2Alias[index];
+                if(alias && value) {
+                    set(doc, alias, value);
+                }
+            });
+            return doc;
+        }
+        return null;
     });
 
     return collection;
@@ -74,15 +82,15 @@ function emlParse(mapper, data, output){
         })
     } else {
         if(typeof mapper === "string") {
-            if(output[mapper]) {
-                if(Array.isArray(output[mapper])){
-                    output[mapper].push(data);
+            var value = get(output, mapper);
+            if(value) {
+                if(Array.isArray(value)){
+                    value.push(data);
                 } else {
-                    output[mapper] = [output[mapper]];
-                    output[mapper].push(data);
+                    set(output, mapper, [value, data]);
                 }
             } else {
-                output[mapper] = data;
+                set(output, mapper, data);
             }
         } else {
             if(Array.isArray(mapper)) {

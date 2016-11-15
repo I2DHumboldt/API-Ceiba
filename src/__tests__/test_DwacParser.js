@@ -2,9 +2,9 @@
  * Created by acastillo on 11/13/16.
  */
 const DwacParser = require("..").dwacParser;
-const occurrenceMapper = require("./../../config/occurrenceMapper.json");
-const emlMapper = require("./../../config/emlMapper.json");
-const resourceMapper = require("./../../config/resourceMapper.json");
+const occurrenceMapper = require("./../../config/mappers/occurrenceMapper.json");
+const emlMapper = require("./../../config/mappers/emlMapper.json");
+const resourceMapper = require("./../../config/mappers/resourceMapper.json");
 
 describe('Darwin-Core parser', function () {
     it('Should load the 3 main files', function () {

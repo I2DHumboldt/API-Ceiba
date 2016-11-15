@@ -4,5 +4,6 @@
       "url": ["localhost:9200"],
       "index": "sibdataportal"
     }
-  }
+  },
+  "source": "/data-test/resource/"
 }
