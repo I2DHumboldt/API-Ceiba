@@ -37,22 +37,6 @@ function contactFilter(resource, contact, rol) {
         field.publisher_fkey = "05b001e7-f903-4925-a679-205329408d01";
         resource["contact"].push(field);
         delete resource[contact];
-
-/*        field.name = field["individualName"]["givenName"]+" "+field["individualName"]["surName"];
-        field.position_name = field["positionName"];
-        field.organization_name = field["organizationName"];
-        field.city = field["address"]["city"];
-        field.administrative_area = field["address"]["administrativeArea"];
-        field.country = field["address"]["country"];
-        field.postal_code = field["address"]["postalCode"];
-        field.address = field["address"]["deliveryPoint"]
-        field.email = field["electronicMailAddress"];
-        delete field["individualName"];
-        delete field["positionName"];
-        delete field["organizationName"];
-        delete field["electronicMailAddress"];
-*/
-
     }
 }
 

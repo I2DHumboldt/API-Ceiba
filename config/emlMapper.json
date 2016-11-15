@@ -1,35 +1,32 @@
 {
-  "$":{
-    "packageId": "resource_id"
-  },
   "dataset":{
-    "title": {"_": "resource_title" },
+    "title": {"_": "title" },
     "abstract": {
-      "para": "resource_description"
+      "para": "description"
     },
     "intellectualRights": {
-      "para": "resource_intellectual_rights"
+      "para": "intellectual_rights"
     },
-    "pubDate": "resource_publication_date",
-    "alternateIdentifier": "resource_alternate_identifier",
-    "language": "resource_language",
+    "pubDate": "publication_date",
+    "alternateIdentifier": "alternate_identifier",
+    "language": "language",
     "keywordSet": [
-      {"keyword":"resource_keyword"},
-      {"keywordThesaurus": "resource_keyword_thesaurus"}
+      {"keyword":"keyword"},
+      {"keywordThesaurus": "keyword_thesaurus"}
     ]
   },
   "additionalMetadata": {
     "metadata": {
       "gbif": {
         "citation": {
-          "_": "resource_citation"
+          "_": "citation"
         },
-        "resourceLogoUrl": "resource_logo_url",
-        "dc:replaces": "resource_gbif_package_id",
-        "hierarchyLevel": "resource_hierarchy_level",
+        "resourceLogoUrl": "logo_url",
+        "dc:replaces": "gbif_package_id",
+        "hierarchyLevel": "hierarchy_level",
         "collection": {
-          "collectionIdentifier": "collection_identifier",
-          "collectionName": "collection_name"
+          "collectionIdentifier": "collection.id",
+          "collectionName": "collection.name"
         }
       }
     }

@@ -1,7 +1,4 @@
 {
-  "$":{
-    "packageId": "id"
-  },
   "dataset":{
     "title": {"_": "title" },
     "abstract": {

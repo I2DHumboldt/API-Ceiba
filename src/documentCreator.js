@@ -12,8 +12,10 @@ const resourceMapper = require("./../config/resourceMapper.json");
 const filterOccurrence = require("./filters/occurrence");
 const filterOccResource = require("./filters/occResource");
 const filterResource = require("./filters/resource");
-
 const publisher = require("./../config/publisher.json");
+
+
+const resourceID = 1;
 
 const clientElastic = new elasticsearch.Client({
     host: process.env.ESDBHOST
@@ -25,12 +27,17 @@ let dwac = dwacParser.loadFromFolder(__dirname+"/../data-test/resource/dwca-sanp
                 {"key":"resource", "mapper":resourceMapper}]}
 );
 let occResource = filterOccResource(dwac["occResource"]);
+let collection = occResource.collection;
+delete occResource.collection;
 let occurrence = dwac["occurrence"];
 let resource = filterResource(dwac["resource"]);
-console.log(occResource);
+
+occResource.id = resourceID;
+resource.id = resourceID;
+
 //Add the missing fields and transform fields
 var sourcefileid = "";
-let rgpId = occResource["resource_gbif_package_id"];
+let rgpId = occResource["gbif_package_id"];
 if(rgpId) {
     let lastIndexOf = rgpId.lastIndexOf("/");
     if(lastIndexOf >= 0) {
@@ -59,22 +66,27 @@ clientElastic.create({
 });
 
 occurrence.forEach(function(doc) {
-    doc = filterOccurrence(doc);
-    doc["sourcefileid"] = sourcefileid;
-    let occurrenceDoc = Object.assign(occResource, publisher, doc);
-    //console.log(occurrenceDoc)
-    clientElastic.create({
-        index: 'sibdataportal',
-        type: 'occurrence',
-        id: doc["occurrenceid"],
-        body: occurrenceDoc
-    }, function (error, response) {
-        //@TODO Sent to logger
-        if(error) {
-            console.log("Saving occurrence: ", error);
-        }
-        else{
-            //console.log(response);
-        }
-    });
+    if(doc){
+        doc = filterOccurrence(doc);
+        doc["sourcefileid"] = sourcefileid;
+        doc["provider"] = publisher;
+        doc["resource"] = occResource;
+        Object.assign(doc.collection, collection);
+        //let occurrenceDoc = Object.assign(occResource, publisher, doc);
+        //console.log(occurrenceDoc)
+        clientElastic.create({
+            index: 'sibdataportal',
+            type: 'occurrence',
+            id: doc["occurrenceid"],
+            body: doc
+        }, function (error, response) {
+            //@TODO Sent to logger
+            if(error) {
+                console.log("Saving occurrence: ", error);
+            }
+            else{
+                //console.log(response);
+            }
+        });
+    }
 })
