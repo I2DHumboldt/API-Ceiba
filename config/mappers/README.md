@@ -46,10 +46,10 @@ El mapper en este caso debe ser el siguiente:
 
 ### Explicación
 
-Como se puede observar el mapper es un JSON, cuyas llaves (keys) corresponden con a las llaves del objecto de entrada.
+Como se puede observar el mapper es un JSON, cuyas llaves (keys) corresponden a las llaves del objecto de entrada.
 los valores (value) del mapper que son de tipo 'string' corresponden a los campos en el objecto de salida. Para especificar
 mas de un nivel en el campo, como por ejemplo x e y que se mapean en location.lat y location.lon, se deben separar con puntos
-cada uno de los niveles.
+cada uno de los niveles `x: 'location.lat'`
 
 Si el campo que se quiere mapear es un objecto, el mapeo se realiza sobre cada uno de los elementos del arreglo y el resultado
 se apila sobre la variables de salida, como en el caso de las mascotas_anteriores.
