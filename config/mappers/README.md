@@ -28,17 +28,19 @@ Y que queremos transformalo en un objecto con la siguiente estructura:
 El mapper en este caso debe ser el siguiente:
 
 ``` js
-     'info': {
-            'nombre': 'name',
-            'x': 'location.lat',
-            'y': 'location.lon'
-     },
-     'edad': 'age',
-     'mascotas_anteriores': {
-        'nombre': 'pets'
-     },
-     'mascota_actual': {
-        'tipo': 'pets'
+     {
+         'info': {
+                'nombre': 'name',
+                'x': 'location.lat',
+                'y': 'location.lon'
+         },
+         'edad': 'age',
+         'mascotas_anteriores': {
+            'nombre': 'pets'
+         },
+         'mascota_actual': {
+            'tipo': 'pets'
+         }
      }
 ```
 
