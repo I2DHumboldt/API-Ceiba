@@ -12,7 +12,7 @@ En este archivo se define la base de datos (_database_) de ElasticSearch en la c
 **Nota**: _Es importante que esta no sea la base de datos de producción. Solo cuando la importación haya finalizado correctamente
 se debe transferir esta base de datos al cluster de producción_
 
-```js
+``` js
 {
   "database": {
     "elasticSearch":{
@@ -22,7 +22,7 @@ se debe transferir esta base de datos al cluster de producción_
   },
   "source": "/data-test/resource/"
 }
-``
+```
 
 ## published.json
 

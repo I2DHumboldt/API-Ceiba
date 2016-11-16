@@ -34,7 +34,7 @@ function contactFilter(resource, contact, rol) {
     var field = resource[contact];
     if(field) {
         field.rol = rol;
-        field.publisher_fkey = "05b001e7-f903-4925-a679-205329408d01";
+        field.publisher_fkey = 1;
         resource["contact"].push(field);
         delete resource[contact];
     }

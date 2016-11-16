@@ -1,4 +1,5 @@
 /**
+ * This function validates the dates
  * Created by acastillo on 11/13/16.
  */
 module.exports = function(date) {

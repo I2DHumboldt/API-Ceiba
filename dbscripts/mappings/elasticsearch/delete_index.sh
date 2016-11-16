@@ -1,0 +1,1 @@
+curl -XDELETE "$ESDBHOST/$ESINDEX/"

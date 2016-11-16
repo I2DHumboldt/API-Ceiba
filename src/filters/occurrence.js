@@ -3,6 +3,8 @@
  * Created by acastillo on 11/13/16.
  */
 const fixDate = require("../util/fixDate");
+const logger = require('../log');
+
 
 module.exports = function(occurrence) {
     try{
@@ -41,7 +43,8 @@ module.exports = function(occurrence) {
         }
     }
     catch (e){
-        console.log("Could not convert the occurrence");
+        logger.log("warn","Could not properly convert the occurrence", occurrence)
     }
+
     return occurrence;
 }

@@ -7,6 +7,8 @@
     "url": "https://github.com/I2DHumboldt/API-Ceiba.git"
   },
   "scripts": {
+    "prepare" : "./dbscripts/reset_database.sh",
+    "import" : "node src/index.js",
     "eslint": "eslint src --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "test": "npm run test-mocha",
@@ -36,7 +38,8 @@
     "async": "^2.1.2",
     "lodash": "^4.16.6",
     "set-value": "^0.4.0",
-    "get-value": "^2.0.6"
+    "get-value": "^2.0.6",
+    "winston": "2.3.0"
   }
 
 }
