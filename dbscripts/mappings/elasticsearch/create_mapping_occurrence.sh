@@ -95,7 +95,7 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 {
   "occurrence": {
     "properties": {
-      "id": {
+            "id": {
 				"type": "string",
 				"index": "analyzed",
 				"fields" : {
@@ -113,6 +113,24 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 				"type": "string",
 				"index": "analyzed",
 				"fields": {
+					"untouched" : {
+						"type": "string",
+						"index": "not_analyzed"
+					},
+					"exactWords": {
+						"type": "string",
+						"analyzer": "string_lowercase"
+					},
+					"spanish": {
+						"type": "string",
+						"analyzer": "spanish_search_analyzer"
+					}
+				}
+			},
+			"group": {
+			    "type": "string",
+			    "index": "analyzed",
+			    "fields": {
 					"untouched" : {
 						"type": "string",
 						"index": "not_analyzed"

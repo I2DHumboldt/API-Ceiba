@@ -6,7 +6,6 @@ const fixDate = require("../util/fixDate");
 
 module.exports = function(resource){
     resource["publication_date"] = fixDate(resource["publication_date"]);
-
     let rai = resource["alternate_identifier"];
     if(rai) {
         for(let i = 0; i < rai.length; i++ ) {

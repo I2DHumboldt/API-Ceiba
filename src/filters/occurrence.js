@@ -8,6 +8,10 @@ const logger = require('../log');
 
 module.exports = function(occurrence) {
     try{
+        occurrence["group"] = ["humboldt"];
+        if(Math.random() > 0.5)
+            occurrence["group"].push("guess");
+
         if(occurrence["location"]) {
             occurrence["location"]["lat"] = +occurrence["location"]["lat"];
             occurrence["location"]["lon"] = +occurrence["location"]["lon"]
