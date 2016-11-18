@@ -127,24 +127,6 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 					}
 				}
 			},
-			"group": {
-			    "type": "string",
-			    "index": "analyzed",
-			    "fields": {
-					"untouched" : {
-						"type": "string",
-						"index": "not_analyzed"
-					},
-					"exactWords": {
-						"type": "string",
-						"analyzer": "string_lowercase"
-					},
-					"spanish": {
-						"type": "string",
-						"analyzer": "spanish_search_analyzer"
-					}
-				}
-			},
 			"sourcefileid":  {
 				"type": "string",
 				"index": "analyzed",
@@ -892,24 +874,24 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 							}
 						}
 					},
-          "keyword_thesaurus" :  {
-            "type": "string",
-            "index": "analyzed",
-            "fields" : {
-              "untouched": {
-                "type": "string",
-                "index": "not_analyzed"
-              },
-              "exactWords": {
-                "type": "string",
-                "analyzer": "string_lowercase"
-              },
-              "spanish": {
-                "type": "string",
-                "analyzer": "spanish_search_analyzer"
-              }
-            }
-          },
+                    "keyword_thesaurus" :  {
+                        "type": "string",
+                        "index": "analyzed",
+                        "fields" : {
+                          "untouched": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                          },
+                          "exactWords": {
+                            "type": "string",
+                            "analyzer": "string_lowercase"
+                          },
+                          "spanish": {
+                            "type": "string",
+                            "analyzer": "spanish_search_analyzer"
+                          }
+                        }
+                    },
 					"hierarchy_level" :  {
 						"type": "string",
 						"index": "analyzed",
@@ -927,7 +909,25 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 								"analyzer": "spanish_search_analyzer"
 							}
 						}
-					}
+					},
+					"group": {
+                        "type": "string",
+                        "index": "analyzed",
+                        "fields": {
+                            "untouched" : {
+                                "type": "string",
+                                "index": "not_analyzed"
+                            },
+                            "exactWords": {
+                                "type": "string",
+                                "analyzer": "string_lowercase"
+                            },
+                            "spanish": {
+                                "type": "string",
+                                "analyzer": "spanish_search_analyzer"
+                            }
+                        }
+                    }
 				}
 			},
 			"institution": {

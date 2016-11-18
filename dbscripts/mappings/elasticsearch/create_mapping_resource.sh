@@ -236,6 +236,24 @@ curl -XPUT -u elastic "http://$ESDBHOST/$ESINDEX/_mapping/resource" -d '
           }
         }
       },
+      "group": {
+	    "type": "string",
+		"index": "analyzed",
+		"fields": {
+		    "untouched" : {
+			    "type": "string",
+			    "index": "not_analyzed"
+			},
+			"exactWords": {
+				"type": "string",
+				"analyzer": "string_lowercase"
+			},
+			"spanish": {
+				"type": "string",
+				"analyzer": "spanish_search_analyzer"
+			}
+		}
+	  },
       "collection_identifier" :  {
         "type": "string",
         "index": "analyzed",

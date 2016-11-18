@@ -38,6 +38,8 @@ module.exports = function(folderToProcess, resourceID, elasticSearch){
         occResource.id = resourceID;
         resource.id = resourceID;
 
+        //@TODO maybe delete this line
+        resource.group = occResource.group;
         //Add the missing fields and transform fields
         var sourcefileid = '';
         let rgpId = occResource['gbif_package_id'];

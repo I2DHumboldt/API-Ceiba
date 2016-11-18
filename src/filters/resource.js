@@ -9,6 +9,19 @@ module.exports = function(resource){
     //@TODO Check this with the supervisor
     resource["publication_date"] = fixDate(resource["publication_date"]);
 
+    //Add the access group for the resource based on the intellectual rights
+    resource["group"] = ["super"];// By default is only accessible for the super users
+    let intellectualRights = resource["intellectual_rights"];
+    if(intellectualRights) {
+        intellectualRights = intellectualRights.toLowerCase().replace(/ /g,"");
+        if(intellectualRights.indexOf("libreanivelinterno") >= 0) {
+            resource["group"].push("humboldt");
+            if(intellectualRights.indexOf("externo") >= 0) {
+                resource["group"].push("guess");
+            }
+        }
+    }
+
     let rai = resource["alternate_identifier"];
     if(rai) {
         for(let i = 0; i < rai.length; i++ ) {
