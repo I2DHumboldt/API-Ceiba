@@ -14,7 +14,7 @@ Kibana (Optional) | 5 | [https://www.elastic.co/products/kibana]
 * Después de instalar Java se deben exportar las el JAVA_HOME. Ejemplo:
 
 ``` bash
-  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/
 ```
 
 ## Instalación
@@ -25,6 +25,8 @@ npm install
 ```
 
 ## Configuración
+
+
 
 ## Ejecución
 
@@ -105,8 +107,8 @@ Edite el archivo de configuración conf/elasticsearch.conf. Lo importante es ele
 Para probar la instalación se ejecuta:
 
 ``` bash
-  $ES_HOME/bin/elasticsearch
-  curl -XGET localhost:9200/_cluster/health?pretty
+$ES_HOME/bin/elasticsearch
+curl -XGET localhost:9200/_cluster/health?pretty
 ```
  
 Se debe ver una salida como esta:
