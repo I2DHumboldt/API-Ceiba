@@ -51,11 +51,8 @@ Los parámetros definidos aquí para la base de datos de ElasticSearch, deben se
 ```
 export ESDBHOST=localhost:9200
 export ESINDEX=sibdataportal
-
 ...
-
 ```
-
 
 ### logger con Wiston
 
