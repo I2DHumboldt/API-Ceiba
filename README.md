@@ -13,14 +13,13 @@ Kibana (Optional) | 5 | [https://www.elastic.co/products/kibana]
 
 * Después de instalar Java se deben exportar las el JAVA_HOME. Ejemplo:
 
-```
+``` bash
   export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/
 ```
 
-
 ## Instalación
 
-``` js
+``` bash
 git clone https://github.com/I2DHumboldt/api-data-importer.git
 npm install
 ```
@@ -29,18 +28,38 @@ npm install
 
 ## Ejecución
 
-### Poner la base de datos en producción
+### Preparar la base de datos de ElasticSearch para la importación
 
-Una vez que los datos están migrados correctamente se pueden pasar a producción. Para evitar periodos donde la base de datos no esté disponible, la migración no se realiza directamente sobre la base datos de producción sino sobre una base de datos local. Esta base de datos se copia sobre el cluster de producción de elasticSearch con un nombre cualquiera, por ejemplo sibdataportalv2. Para esto se recomienda usar la librería https://www.npmjs.com/package/elasticdump:
-
+``` bash
+nmp run prepare
 ```
-#### Install
+
+### Importar los datos a ElasticSearch
+
+``` bash
+npm run import
+```
+
+## Poner la base de datos en producción
+
+Una vez que los datos están migrados correctamente se pueden pasar a producción. Para evitar periodos donde la base de 
+datos no esté disponible, la migración no se realiza directamente sobre la base datos de producción sino sobre una base 
+de datos local. Esta base de datos se copia sobre el cluster de producción de elasticSearch con un nombre cualquiera, 
+por ejemplo sibdataportalv2.
+
+### Elasticdump
+
+Para esto se recomienda usar la librería https://www.npmjs.com/package/elasticdump:
+
+#### Instalación
+
+``` bash
 npm install elasticdump -g
+```
 
-Elasticdump
+#### Copiar un índice  la base de datos de desarrollo a la de producción con analyzer y mapping:
 
-#### Copy an index from staging to production with analyzer and mapping:
-
+``` bash
 elasticdump \
   --input=http://staging.es.com:9200/sibdataportal \
  	 --output=http://production.es.com:9200/sibdataportalv2 \
@@ -76,6 +95,7 @@ y después se hace apuntar el alias sibdataportal a la base de datos sibdataport
 Descargar ElasticSearch 5 https://www.elastic.co/products. Es recomendable también instalar Kibana y Logstash.
 
 Edite el archivo de configuración conf/elasticsearch.conf. Lo importante es elegir el nombre del cluster del que hace parte el nodo, el identificador del nodo (nombre) y la red de la que debe aceptar conexiones:
+
 ```
 	cluster.name:   ${CLUSTER_NAME}
 	node.name:   ${HOSTNAME}
@@ -84,10 +104,10 @@ Edite el archivo de configuración conf/elasticsearch.conf. Lo importante es ele
 
 Para probar la instalación se ejecuta:
 
- ```
+``` bash
   $ES_HOME/bin/elasticsearch
   curl -XGET localhost:9200/_cluster/health?pretty
- ```
+```
  
 Se debe ver una salida como esta:
 
