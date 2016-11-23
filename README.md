@@ -26,7 +26,7 @@ npm install
 
 ## Configuración
 
-Toda la configuración de la aplicación se define en la carpeta `config`. Siga las instrucciones del [README.md](https://github.com/I2DHumboldt/api-data-importer/blob/master/config/README.md) de esta carpeta. 
+Toda la configuración de la aplicación se define en la carpeta `config`. Siga las instrucciones del [README.md](https://github.com/I2DHumboldt/api-data-importer/tree/master/config) de esta carpeta. 
 
 ## Ejecución
 
