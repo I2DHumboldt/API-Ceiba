@@ -3,7 +3,7 @@
 En esta carpeta se encuentra:
 1. [La definición de los mappers](mappers/README.md)
 2. [La configuración del origen y destino de los datos](config.json)
-3. [Los datos del publicador de los datos](publisher.json)
+3. [Los parámetros del publicador de los datos](publisher.json)
 
 ## config.json
 En este archivo se define la base de datos (_database_) de ElasticSearch en la cual se guardarán los datos durante la importación
