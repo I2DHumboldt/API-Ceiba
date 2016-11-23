@@ -1,0 +1,413 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd"
+         packageId="http://i2d.humboldt.org.co/ceiba/resource.do?id=mateguadua_magnoliophyta_2014/v5" system="http://gbif.org" scope="system"
+         xml:lang="spa">
+
+<dataset>
+  <alternateIdentifier>http://i2d.humboldt.org.co/ceiba/resource.do?r=mateguadua_magnoliophyta_2014</alternateIdentifier>
+  <title xml:lang="spa">Composición florística y estructura de una parcela permanente en bosques secos tropicales del municipio de Tuluá, Valle del Cauca</title>
+<creator>
+    <individualName>
+        <givenName>Juan Bautista</givenName>
+      <surName>Adarve Duque</surName>
+    </individualName>
+    <organizationName>Instituto para la Investigación y la Preservación del Patrimonio Cultural y Natural del Valle del Cauca INCIVA</organizationName>
+    <positionName>Técnico operativo</positionName>
+    <address>
+        <city>Tuluá</city>
+        <administrativeArea>Valle Del Cauca</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3.003258447E9</phone>
+    <electronicMailAddress>adarvejuan@gmail.com</electronicMailAddress>
+</creator>
+<metadataProvider>
+    <individualName>
+        <givenName>Adriana</givenName>
+      <surName>Quintana Vargas</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Contratista</positionName>
+    <address>
+        <deliveryPoint>Calle 28 a # 15-09</deliveryPoint>
+        <city>Bogotá, D.C.</city>
+        <administrativeArea>Bogotá, D.C.</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>320 2767 Ext. 1237</phone>
+    <electronicMailAddress>adrintana@hotmail.com</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co/</onlineUrl>
+</metadataProvider>
+    <associatedParty>
+    <individualName>
+      <surName>Infraestructura Institucional de Datos</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <address>
+        <deliveryPoint>Calle 28A # 15-09</deliveryPoint>
+        <city>Bogotá, D.C.</city>
+        <administrativeArea>Bogotá, D.C.</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>(57)(1)3202767</phone>
+    <electronicMailAddress>i2d@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://humboldt.org.co/</onlineUrl>
+    <role>custodianSteward</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Alejandro</givenName>
+      <surName>Castaño Naranjo</surName>
+    </individualName>
+    <organizationName>Instituto para la Investigación y la Preservación del Patrimonio Cultural y Natural del Valle del Cauca INCIVA</organizationName>
+    <positionName>Técnico operativo</positionName>
+    <address>
+        <deliveryPoint>Carrera 27 b # 38 b-14</deliveryPoint>
+        <city>Tuluá</city>
+        <administrativeArea>Valle Del Cauca</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3.154687938E9</phone>
+    <electronicMailAddress>alecastulua@gmail.com</electronicMailAddress>
+    <role>principalInvestigator</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Wilson</givenName>
+      <surName>Devia Álvarez</surName>
+    </individualName>
+    <organizationName>Unidad Central del Valle del Cauca UCEVA</organizationName>
+    <positionName>Docente universitario</positionName>
+    <address>
+        <deliveryPoint>Carrera 25 b # 44-28</deliveryPoint>
+        <city>Tuluá</city>
+        <administrativeArea>Valle Del Cauca</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>2240222.0</phone>
+    <electronicMailAddress>wildevia@gmail.com</electronicMailAddress>
+    <role>principalInvestigator</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>William Gerardo</givenName>
+      <surName>Vargas Méndez</surName>
+    </individualName>
+    <organizationName>Universidad ICESI</organizationName>
+    <positionName>Docente universitario</positionName>
+    <address>
+        <city>Cali</city>
+        <administrativeArea>Valle Del Cauca</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3.006115138E9</phone>
+    <electronicMailAddress>williamvarg@gmail.com</electronicMailAddress>
+    <role>principalInvestigator</role>
+    </associatedParty>
+<pubDate>
+      	2016-06-29
+</pubDate>
+<language>spa</language>
+<abstract>
+  <para>I2D-BIO_2014_IN054. 
+
+En el marco de la línea de investigación y monitoreo del bosque seco tropical, diferentes instituciones académicas, institutos de investigación, ONGs y corporaciones territoriales, entre otros se encuentran construyendo una línea base de monitoreo sobre la composición, dinámica y función de este ecosistema a través del establecimiento de parcelas permanentes de 1 ha. Bajo este marco de referencia, investigadores del Instituto para la Investigación y la Preservación del Patrimonio Cultural y Natural del Valle del Cauca (INCIVA), la Universidad ICESI y la Unidad Central del Valle del Cauca  (UCEVA) realizaron el establecimiento de una parcela permanente en el municipio de Tuluá, Valle del Cauca (Región Valle del Cauca) durante los meses de marzo, agosto y noviembre de 2012. Este recurso contiene la información resultante del censo realizado en esta parcela, referente a la taxonomía y datos estructurales como DAP, altura y cobertura para todos los individuos vegetales con diámetro superior a 5.0 cm, medido a una altura de 1.3 m. En total se reportan 1076 individuos respectivos a 58 especies, 50 géneros y 28 familias botánicas, 14 registros se determinaron hasta el rango taxonómico de clase con dos especies diferentes. Las familias botánicas con mayor número de especies son Fabaceae (7), Myrtaceae (6), Moraceae (5) y Sapindaceae (5).</para>
+</abstract>
+      <keywordSet>
+            <keyword>parcela permanente</keyword>
+            <keyword>bosque seco tropical</keyword>
+            <keyword>estructura</keyword>
+            <keyword>composición</keyword>
+            <keyword>taxonomía</keyword>
+            <keyword>plantae</keyword>
+            <keyword>Magnoliophyta</keyword>
+            <keyword>DAP</keyword>
+            <keyword>altura</keyword>
+            <keyword>Mateguadua</keyword>
+            <keyword>Tuluá</keyword>
+            <keyword>Valle del Cauca</keyword>
+            <keyword>Mateguadua</keyword>
+        <keywordThesaurus>N/A</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Observation</keyword>
+        <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+      </keywordSet>
+  <additionalInfo>
+    <para>Asociado al recurso se incorporó dentro de la Infraestructura Institucional de Datos del Instituto Humboldt los informes de actividades asociados a los productos del contrato.</para>
+  </additionalInfo>
+  <intellectualRights>
+    <para>Libre a nivel interno y externo (Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0)</para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://i2d.humboldt.org.co/ceiba/resource.do?r=mateguadua_magnoliophyta_2014</url>
+    </online>
+  </distribution>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Bosques secos tropicales en el municipio de Tuluá, Valle del Cauca (Región Valle del río Cauca).</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-76.164</westBoundingCoordinate>
+          <eastBoundingCoordinate>-76.159</eastBoundingCoordinate>
+          <northBoundingCoordinate>4.029</northBoundingCoordinate>
+          <southBoundingCoordinate>4.024</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>2012-03-08</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2012-11-19</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+          <taxonomicCoverage>
+              <generalTaxonomicCoverage>Se siguió el sistema de clasificación de APG III (2009) para las Angiospermas. En total se reportan 1076 individuos respectivos a 58 especies, 50 géneros y 28 familias botánicas, 14 registros se determinaron hasta el rango taxonómico de clase con dos especies diferentes. Las familias botánicas documentadas con el número de especies y número de individuos respectivamente registradas en el recurso son: Fabaceae (7,39), Myrtaceae (6,62), Moraceae (5,28), Sapindaceae (5,206), Lauraceae (5,35), Rubiaceae (4,12), Malpighiaceae (2,8), Meliaceae (2,138), Rutaceae (2,27), Acanthaceae (1,94), Annonaceae (1,2), Araliaceae (1,9), Arecaceae (1,1), Bignoniaceae (1,2), Boraginaceae (1,8), Clusiaceae (1,2), Euphorbiaceae (1,27), Flacourtiaceae (1,8),Malvaceae (1,297), Myrsinaceae (1,1), Nyctaginaceae (1,3), Piperaceae (1,4), Polygonaceae (1,1), Rhamnaceae (1,4), Solanaceae (1,2), Urticaceae (1,5), Verbenaceae (1,37).</generalTaxonomicCoverage>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Fabaceae</taxonRankValue>
+                  <commonName>Fabaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Myrtaceae</taxonRankValue>
+                  <commonName>Myrtaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Moraceae</taxonRankValue>
+                  <commonName>Moraceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Sapindaceae</taxonRankValue>
+                  <commonName>Sapindaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Lauraceae</taxonRankValue>
+                  <commonName>Lauraceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Rubiaceae</taxonRankValue>
+                  <commonName>Rubiaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Malpighiaceae</taxonRankValue>
+                  <commonName>Malpighiaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Meliaceae</taxonRankValue>
+                  <commonName>Meliaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Rutaceae</taxonRankValue>
+                  <commonName>Rutaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Acanthaceae</taxonRankValue>
+                  <commonName>Acanthaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Annonaceae</taxonRankValue>
+                  <commonName>Annonaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Araliaceae</taxonRankValue>
+                  <commonName>Araliaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Arecaceae</taxonRankValue>
+                  <commonName>Arecaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Bignoniaceae</taxonRankValue>
+                  <commonName>Bignoniaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Boraginaceae</taxonRankValue>
+                  <commonName>Boraginaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Clusiaceae</taxonRankValue>
+                  <commonName>Clusiaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Euphorbiaceae</taxonRankValue>
+                  <commonName>Euphorbiaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Flacourtiaceae</taxonRankValue>
+                  <commonName>Flacourtaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Malvaceae</taxonRankValue>
+                  <commonName>Malvaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Myrsinaceae</taxonRankValue>
+                  <commonName>Myrsinaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Nyctaginaceae</taxonRankValue>
+                  <commonName>Nyctaginaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Piperaceae</taxonRankValue>
+                  <commonName>Piperaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Polygonaceae</taxonRankValue>
+                  <commonName>Polygonaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Rhamnaceae</taxonRankValue>
+                  <commonName>Rhamnaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Solanaceae</taxonRankValue>
+                  <commonName>Solanaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Urticaceae</taxonRankValue>
+                  <commonName>Urticaceas</commonName>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Verbenaceae</taxonRankValue>
+                  <commonName>Verbenaceas</commonName>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <purpose>
+    <para>Este recurso tiene como objetivo la publicación y disponibilidad de la información de composición florística y datos estructurales de una parcela permanente en bosques secos tropicales del municipio de Tuluá, Valle del Cauca (Región Valle del Río Cauca) el cual tuvo como propósito adicional evaluar a largo plazo el efecto del cambio climático sobre este ecosistema. Además trata de generar un espacio para la incorporación constante de datos provenientes de diferentes períodos de medida sobre el incremento diamétrico, reclutamiento y mortalidad de los individuos registrados en esta parcela, que repercuta en una aproximación al estudio de la dinámica de estos bosques.</para>
+  </purpose>
+  <contact>
+    <individualName>
+        <givenName>Roy</givenName>
+      <surName>González</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Investigador Asistente</positionName>
+    <address>
+        <deliveryPoint>Calle 28 a # 15-09</deliveryPoint>
+        <city>Bogotá, D.C.</city>
+        <administrativeArea>Bogotá, D.C.</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3202767 ext. 1137</phone>
+    <electronicMailAddress>rgonzalez@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co/</onlineUrl>
+  </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>En el terreno se demarcaron 25 cuadrantes de 20 m x 20 m, en los vértices se instalaron tubos de PVC de color blanco de altura de 0,75 m con cinta plástica amarilla con el fin de nominar cada subpacerla y cuadrante por medio de códigos alfanuméricos.  Debido a las condiciones de la zona la forma de la parcela se modificó en tres bloques rectangulares.</para>
+          </description>
+        </methodStep>
+        <methodStep>
+          <description>
+            <para>Se registraron, midieron e identificaron todos los individuos con DAP ≥ 5 cm tomando rasgos funcionales como DAP y altura.</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>Durante los meses de marzo, agosto y noviembre de 2012 se realizó el establecimiento de una parcela permanente para el monitoreo de la vegetación de 1 ha en los bosques secos tropicales con mejor estado de conservación del municipio de Tuluá (Valle del Cauca), la parcela se estableció en el costado sur oriental del Jardín Botánico Juan María Céspedes perteneciente al Instituto para la Investigación y la Preservación del Patrimonio Cultural y Natural del Valle del Cauca (INCIVA).</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Con base en la metodología para establecimiento de parcelas permanentes planteado por Duellman y los ajustes metodológicos propuestos por el IAvH, los cuales contienen las técnicas y métodos para realizar el proceso montaje, marcación y medición de la vegetación en parcelas permanentes, se programaron diferentes actividades de campo, en las cuales se realizaron las labores de implementación de estas parcelas y se tomaron los datos de cada uno de los individuos vegetales localizados al interior de estas plataformas de monitoreo</para>
+        </samplingDescription>
+      </sampling>
+      <qualityControl>
+        <description>
+          <para>Se revisaron los datos tomados en campo a partir del chequeo directo de algunos individuos localizados en las parcelas, donde se revisaron los valores de DAP, altura, así como la identificación taxonómica de los individuos muestreados. Se siguió el sistema de clasificación de APG III (2009) para las Angiospermas.</para>
+        </description>
+      </qualityControl>
+  </methods>
+  <project>
+      <title>Plan Operativo Anual 2011 - Lineamientos para el ordenamiento y planeación del territorio con énfasis en el uso y conservación de la biodiversidad y sus servicios</title>
+    <personnel>
+      <individualName>
+          <givenName>Alejandro</givenName>
+        <surName>Castaño Naranjo</surName>
+      </individualName>
+      <role>principalInvestigator</role>
+    </personnel>
+    <funding>
+      <para>Contrato No. 11-11/103-159PS entre el Instituto de Investigación de Recursos Biológicos &quot;Alexander von Humboldt&quot; y la Universidad ICESI  y Contrato No. 14-14/008-14/075-190PS entre el Instituto de Investigación de Recursos Biológicos Alexander von Humboldt y Adriana Marcela Quintana Vargas con el objeto de estandarizar y documentar los datos.</para>
+    </funding>
+    <studyAreaDescription>
+      <descriptor name="generic"
+                  citableClassificationSystem="false">
+        <descriptorValue>El área de estudio comprende las coberturas de bosque seco tropical para el municipio de Tuluá, Valle del Cauca (Región Valle del río Cauca) específicamente en el Jardín Botánico Juan María Céspedes, corresponde a una zona boscosa con un área de 154 ha entre los 1.000 y 1.430 msnm localizada en el piedemonte de la Cordillera Central.</descriptorValue>
+      </descriptor>
+    </studyAreaDescription>
+    <designDescription>
+      <description>
+          <para>A partir del establecimiento de una serie de parcelas permanentes de 1 ha para el monitoreo de la vegetación en bosques con secos tropicales de Colombia, con buen estado de conservación, se está construyendo una línea base de monitoreo sobre la composición, estructura, dinámica y funcionamiento de este ecosistema a una escala de país. Diferentes instituciones e investigadores nacionales se encuentran adelantando esta iniciativa dentro de los cuales se incluye el Instituto para la Investigación y la Preservación del Patrimonio Cultural y Natural del Valle del Cauca (INCIVA), la Universidad ICESI y la Unidad Central del Valle del Cauca  (UCEVA) por medio del grupo de investigación Los TOLUES, quienes lideran este proceso en el valle del Río Cauca.</para>
+      </description>
+    </designDescription>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2014-11-11T03:53:51.603-05:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation identifier="http://i2d.humboldt.org.co/ceiba/resource.do?r=mateguadua_magnoliophyta_2014">Instituto para la Investigación y la Preservación del Patrimonio Cultural y Natural del Valle del Cauca (INCIVA), Universidad ICESI,  Unidad Central del Valle del Cauca  (UCEVA), Instituto de Investigación de Recursos Biológicos Alexander von Humboldt  (2014). Composición florística y estructura de una parcela permanente en bosques secos tropicales del municipio de Tuluá, Valle del Cauca. 1076 registros, aportados por: González, R. (Contacto del recurso), Adarve, J. (Creador del recurso), Quintana, A. (Proveedor de metadatos). Versión 5.0. http://i2d.humboldt.org.co/ceiba/resource.do?r=mateguadua_magnoliophyta_2014</citation>
+          <bibliography>
+                <citation identifier="http://www.mobot.org/MOBOT/research/APweb/   ">Stevens, P. F. (2001 onwards). Angiosperm Phylogeny Website. Version 12, July 2012 [and more or less continuously updated since].</citation>
+                <citation identifier="http://www.theplantlist.org/   ">The Plant List (2013). Version 1.1. Published on the Internet; http://www.theplantlist.org/</citation>
+          </bibliography>
+            <physical>
+              <objectName>Composición florística y estructura de una parcela permanente en bosques secos tropicales del municipio de Tuluá, Valle del Cauca</objectName>
+              <characterEncoding>UTF-8</characterEncoding>
+              <dataFormat>
+                <externallyDefinedFormat>
+                  <formatName>txt</formatName>
+                    <formatVersion>2014</formatVersion>
+                </externallyDefinedFormat>
+              </dataFormat>
+              <distribution>
+                <online>
+                  <url function="download">http://ipt.sibcolombia.net/valle/resource.do?r=inciva-001</url>
+                </online>
+              </distribution>
+            </physical>
+          <dc:replaces>http://i2d.humboldt.org.co/ceiba/resource.do?id=mateguadua_magnoliophyta_2014/v4.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

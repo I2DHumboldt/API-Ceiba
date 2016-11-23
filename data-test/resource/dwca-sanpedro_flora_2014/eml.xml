@@ -1,0 +1,615 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd"
+         packageId="http://i2d.humboldt.org.co/ceiba/resource.do?id=sanpedro_flora_2014/v9" system="http://gbif.org" scope="system"
+         xml:lang="spa">
+
+<dataset>
+  <alternateIdentifier>http://doi.org/10.15472/luwleo</alternateIdentifier>
+  <alternateIdentifier>http://i2d.humboldt.org.co/ceiba/resource.do?r=sanpedro_flora_2014</alternateIdentifier>
+  <title xml:lang="spa">Caracterización florística de la subcuenca del Río San  Pedro, San Pedro, Valle del Cauca</title>
+<creator>
+    <individualName>
+        <givenName>Enrique</givenName>
+      <surName>Méndez</surName>
+    </individualName>
+    <organizationName>Corporación Paisajes Rurales</organizationName>
+    <positionName>Investigador</positionName>
+    <address>
+        <deliveryPoint>Cr 17 # 7ª-17</deliveryPoint>
+        <city>Armenia</city>
+        <administrativeArea>Quindío</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3136973421</phone>
+    <electronicMailAddress>enriquemvargas@gmail.com</electronicMailAddress>
+</creator>
+<metadataProvider>
+    <individualName>
+        <givenName>Enrique</givenName>
+      <surName>Mendez</surName>
+    </individualName>
+    <organizationName>Corporación Paisajes Rurales</organizationName>
+    <positionName>Investigador</positionName>
+    <address>
+        <deliveryPoint>Cr 17 # 7ª-17</deliveryPoint>
+        <city>Armenia</city>
+        <administrativeArea>Quindío</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3136973421</phone>
+    <electronicMailAddress>enriquemvargas@gmail.com</electronicMailAddress>
+</metadataProvider>
+    <associatedParty>
+    <individualName>
+        <givenName>Fabio</givenName>
+      <surName>Lozano</surName>
+    </individualName>
+    <organizationName>Corporación Paisajes Rurales</organizationName>
+    <positionName>Coordinador del Proyecto</positionName>
+    <address>
+        <deliveryPoint>Cr 17 # 7ª-17</deliveryPoint>
+        <city>Armenia</city>
+        <administrativeArea>Quindío</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3182618970</phone>
+    <electronicMailAddress>fabiohlozano@yahoo.com</electronicMailAddress>
+    <onlineUrl>http://www.paisajesrurales.com/</onlineUrl>
+    <role>author</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Maria Cristina</givenName>
+      <surName>Buitrago Giraldo</surName>
+    </individualName>
+    <organizationName>Corporación Paisajes Rurales</organizationName>
+    <positionName>Compiladora</positionName>
+    <address>
+        <deliveryPoint>Cr 17 # 7ª-17</deliveryPoint>
+        <city>Armenia</city>
+        <administrativeArea>Quindío</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3113689008</phone>
+    <electronicMailAddress>tinabuitra@gmail.com</electronicMailAddress>
+    <role>publisher</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+      <surName>Infraestructura Institucional de Datos</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>I2D</positionName>
+    <address>
+        <deliveryPoint>Calle 28A No. 15-09</deliveryPoint>
+        <city>Bogotá, D.C.</city>
+        <administrativeArea>Bogotá, D.C.</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3202767</phone>
+    <electronicMailAddress>i2d@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+    <role>custodianSteward</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Enrique</givenName>
+      <surName>Mendez</surName>
+    </individualName>
+    <organizationName>Corporación Paisajes Rurales</organizationName>
+    <positionName>Investigador</positionName>
+    <address>
+        <deliveryPoint>Cr 17 # 7ª-17</deliveryPoint>
+        <city>Armenia</city>
+        <administrativeArea>Quindío</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3136973421</phone>
+    <electronicMailAddress>enriquemvargas@gmail.com</electronicMailAddress>
+    <role>author</role>
+    </associatedParty>
+<pubDate>
+      	2016-06-30
+</pubDate>
+<language>spa</language>
+<abstract>
+  <para>I2D-BIO_2014_IPT010.
+
+A pesar que los Andes tropicales se han identificado como un área de conservación prioritaria en América Latina, toda la región está amenazada por la alteración del medio Natural (Saavedra &amp; Freese 1.986); debido a la influencia del hombre sobre los ecosistemas naturales que empezó hace unos 2.500 años con las actividades agrícolas de los indígenas y se intensificó después con la conquista española, tornándose desastrosa por la deforestación, las quemas y la subsiguiente erosión del suelo (Van der Hammen 1.974). La caracterización local de la vegetación representa el primer paso hacia el entendimiento de la estructura y dinámica de un bosque, lo que a su vez es fundamental para comprender los diferentes aspectos ecológicos, incluyendo el manejo exitoso de los bosques tropicales.  La información básica sobre los ecosistemas constituye una herramienta importante para la implementación de medidas adecuadas para su conservación efectiva y manejo en un largo plazo, especialmente en áreas reducidas o fragmentadas.  No obstante, la continua reducción y fragmentación de los bosques por deforestación constituyen amenazas contra la integridad de los ecosistemas, de los cuales en su mayoría no se cuenta con información básica para revertir ese proceso; por lo expuesto anteriormente, se evidencia la necesidad de realizar estudios que conduzcan al conocimiento de la diversidad y riqueza de estos ecosistemas (REDFORD et al., 1990). En el marco del contrato No. 13-13-166-295PS (Corporación Autónoma Regional del Valle del Cauca CVC y el Instituto de Investigación de Recursos Biológicos Alexander von Humboldt), entre el 6 y 17 de Diciembre del 2013 se realizó la caracterización florística de la subcuenca del Río San Pedro, municipio San Pedro, entre los corregimientos de Buenos Aires, Pocitos y Los Chancos, Valle del Cauca, como insumo para la identificación de oportunidades de conservación en una ventana de paisaje rural de 2703 Ha, priorizada por la Corporación Autónoma Regional del Valle del Cauca CVC en el marco del convenio con el Instituto Alexander von Humboldt - IAvH. Se seleccionaron cinco elementos del paisaje en un gradiente altitudinal desde los 1000 y 2100 m: cuatro bosques secundarios, cinco bosques riparios, tres parches de sucesión vegetal avanzada, cuatro mosaicos de potreros-cultivos y cuatro potreros arbolados. En 40 puntos de conteo establecidos en cada elemento del paisaje, se realizaron dos repeticiones para un total de 80 muestras. En total, por medio de transectos y recorridos por toda el área de estudio se registró un total de 334 especies de plantas, pertenecientes a 232 géneros y 96 familias botánicas, de las cuales 307 (91.9%) especies son nativas,  25 (7.4%) especies son introducidas y 2 (0.5%) especies naturalizadas y 22 especies presentaron algún grado de amenaza.</para>
+</abstract>
+      <keywordSet>
+            <keyword>diversidad florística</keyword>
+            <keyword>paisaje rural</keyword>
+            <keyword>conservación</keyword>
+            <keyword>Valle del Cauca</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Observation</keyword>
+        <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+      </keywordSet>
+  <additionalInfo>
+    <para>Asociado al recurso, se incorporó dentro de la Infraestructura Institucional de Datos, el informe final del proyecto.</para>
+  </additionalInfo>
+  <intellectualRights>
+    <para>Libre a nivel interno y externo (Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0)</para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://i2d.humboldt.org.co/ceiba/resource.do?r=sanpedro_flora_2014</url>
+    </online>
+  </distribution>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>La Corporación Paisajes Rurales en asocio con la CVC, seleccionaron un paisaje rural de 2703 Ha, ubicado en un gradiente altitudinal desde los 1000 y 2100 m de la cuenca del Río San Pedro, municipio San Pedro, entre los corregimientos de Buenos Aires, Pocitos y Los Chancos, en el Valle del Cauca. La cuenca del río San Pedro es afluente del río Cauca y se encuentra ubicada en la vertiente occidental de la cordillera Central. La zona ha sido clasificada como bosque tropical húmedo, con periodos de lluvia de marzo a junio y de septiembre a diciembre y una precipitación anual entre los 1000 y 1800 mm.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-76.57</westBoundingCoordinate>
+          <eastBoundingCoordinate>-76.04</eastBoundingCoordinate>
+          <northBoundingCoordinate>4.1</northBoundingCoordinate>
+          <southBoundingCoordinate>3.61</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>2013-12-06</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2013-12-16</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+          <taxonomicCoverage>
+              <generalTaxonomicCoverage>Se realizaron 40 puntos (transectos) de 50 x 4 acompañados de recorridos o caminatas para conocer el estado de conservación y la diversidad florística por cada elemento del Paisaje. Entre las familias botánicas con mayor número de especies se registró que la más abundante fue Asteraceae (familia del botón de oro, chilcos, marucha, camargo) con 25 (26.0%) especies, le sigue Lauraceae (familia de los laureles, aguacatillos, laurel comino) con 18 (18.7%) especies, Euphorbiaceae (familia guacamayo, cianuro, liberal) con 16 (16.6%) especies, Rubiaceae (familia del café, cafetos de monte) con 13 (13.5%) especies, Mimosaceae (familia de los guamos, dormidera) con 10 (14.1%) especies y Solanaceae (familia de los frutillos) con 12 (12.5%) especies.</generalTaxonomicCoverage>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Justicia chlorostachya</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Pseuderanthemum dawei</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Trichanthera gigantea</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Achatocarpus nigricans</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Saurauia cuatrecasana</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Viburnum cornifolium</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Alternanthera paronichyoides</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Cyathula prostrata</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Iresine diffusa</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Furcraea cabuya var. Cabuya</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Annona quinduensis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Guatteria amplifolia</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Guatteria sp</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Funastrum claustrum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Rauwolfia tetraphylla</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Anthurium buganum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Anthurium formosum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Anthurium glaucospadix</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Anthurium scandens</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Xanthosoma daguense</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Xanthosoma helleborifolium</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Hydrocotyle bonplandii</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Oreopanax floribundum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Aiphanes horrida</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Aiphanes simplex</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Attalea butyracea</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Bactris gasipaes var. Chichagui</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Chamaedorea linearis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Chamaedorea pinnatifrons</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Aristolochia ringens</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Acmella ciliata</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Ageratum conyzoides</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Austroeupatorium inulifolium</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Baccharis nítida</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Baccharis trinervis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Bidens pilosa</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Calea colombiana</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Clibadium surinamense</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Pitcairnia megasepala</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Armatocereus humilis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Hylocereus undatus</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Rhipsalis baccifera</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Senna pistaciifolia</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Senna pistaciifolia</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Calophyllum brasiliense</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Celtis iguanaea</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Couepia chrysocalyx</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Chrysochlamys colombiana</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Croton gossypiifolius</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Croton magdalenensis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Jatropa curcas</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Quercus humboldtii</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Heliconia mutisiana</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Juglans neotropica</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Aniba perutilis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Beilschmiedia costaricensis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Licaria applanata</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Adenaria floribunda</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Magnolia hernandezii</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Ceiba pentandra</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Quararibea asterolepis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Miconia caudata</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Cedrela montana</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Trichilia pallida</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Enterolobium cyclocarpum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Pithecellobium dulce</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Otoba lehmannii</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Fraxinus chinensis</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Swartzia robiniifolia</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Trichostigma octandrum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Piper aduncum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Cynodon plectostachyus</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Hyparrhenia rufa</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Elaeagia myriantha</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Guettarda crispiflora</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Zanthoxylum caribaeum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Chrysophyllum argenteum</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Pouteria torta subsp. Pilosa</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Witheringia solanácea</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>species</taxonRankName>
+                <taxonRankValue>Hedychium coronarium</taxonRankValue>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <purpose>
+    <para>(1) Compilar y analizar información secundaria sobre estudios de caracterización e inventarios de flora realizados en la cordillera central, cuencas de la ventana de estudio para análisis biogeográficos y de conservación. (2) Estructurar y documentar la metodología a utilizar para la caracterización de la flora para ajustes y sugerencias de la coordinación del proyecto. (3) Participar en reuniones con la comunidad rural para la socialización del proyecto y el alcance del mismo. (4) Realizar la caracterización de la flora en la ventana de paisaje rural de la cuenca del Río San Pedro (se sugiere apoyarse en la metodología definida en el libro Herramientas de manejo para la conservación de biodiversidad en paisajes rurales, Lozano-Zambrano et al 2009). (5) Identificar, analizar y documentar con los datos de campo e información secundaria recopilada y analizada los elementos del paisaje con valor de conservación de acuerdo al análisis de criterios biológicos (diversidad alfa, endemismos, amenaza, entre otros) de acuerdo a Lozano-Zambrano et al (2009). (6) Participar con las directrices de la coordinación del proyecto, la identificación de oportunidades de conservación teniendo en cuenta los elementos del paisaje con valor de conservación para la biodiversidad priorizados y el análisis de viabilidad socioeconómica de las fincas rurales para implementar acciones de conservación. (7) Aportar información, criterios y recomendaciones para el diseño de las herramientas de manejo del paisaje que aporten a restituir conectividad en las cuencas, mejoren la capacidad de regulación hídrica de las mismas y aumente las oportunidades de conservación de la biodiversidad en la cuenca priorizada. (8) Elaborar los lineamientos para las estrategias de restauración incluyendo listados de especies nativas a utilizar en cada una de las Herramientas de Manejo del Paisaje (HMP) y la dinámica de su establecimiento para garantizar su eficacia. Estas HMP deben incluir el costo completo por hectárea o kilómetro de implementación con información verificable de la región. (9) Diseñar una metodología y propuesta de indicadores biológicos de flora para el monitoreo de la eficacia de las HMP propuestas. (10) Realizar un proceso de documentación fotográfica de todo el proceso de trabajo en campo. (11) Entregar las colecciones, fichas en Excel y metadatos según los estándares del Instituto Humboldt y de la CVC.</para>
+  </purpose>
+  <contact>
+    <individualName>
+        <givenName>Wilson</givenName>
+      <surName>Ramirez</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Interventor</positionName>
+    <address>
+        <deliveryPoint>Calle 28A No. 15-09</deliveryPoint>
+        <city>Bogotá, D.C.</city>
+        <administrativeArea>Bogotá, D.C.</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>3202767</phone>
+    <electronicMailAddress>wramirez@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+  </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>Trabajo de campo: Se seleccionaron cinco elementos del paisaje, distribuidas de la siguiente manera: cuatro bosques secundarios entre 1800 y 2113 m, con diferentes estados de conservación en su estructura y composición florística, con árboles mayores de 15 m y un DAP mayor a 20cm. Cinco bosques riparios entre 1093 y 2054 m, con bosques al lado del cuerpo de agua, en la parte alta las cañadas tiene mayor cobertura vegetal y va disminuyendo con la altura, en la parte baja es muy seco, este bosque ripario tiene una extensión de más o menos 100 m a lado y lado de la cañada. Tres parches de sucesión vegetal avanzada entre 1954 y 2063 m, con hasta 15 años de edad y dominado por árboles pioneros, con DAP de 10 cm, y altura de 13 m de altura. Cuatro mosaicos de potreros y cultivos entre 1262 y 1840 m, y cuatro potreros arbolados entre 1062 y 1837 m. Se establecieron 40 puntos de radio fijo en el paisaje. En cada elemento del paisaje seleccionado se ubicaron al azar los puntos para su posterior evaluación en el cual se contó con dos auxiliares de campo para la toma de datos (perímetros) y colecta de material vegetal.</para>
+          </description>
+        </methodStep>
+        <methodStep>
+          <description>
+            <para>Trabajo de laboratorio: Contando con la experiencia en este tipo de investigaciones, con el registro fotográfico y colecta de material vegetal, se procedió a la confirmación de especies, nombres científicos, familias y géneros en internet como www: Universidad Nacional de Colombia-Herbario, www: Árboles, Arbustos y Palmas de Panamá y W3T (W3 Trópicos / Missouri Botanical Garden. 2003. Momenclatural  Data  Base. Available from Internet: &lt; URL: http: // robot.mobot.org/W3T/Search / vast.html.) y cuando no se podía o se generan más dudas se contó con el apoyo de algunos especialistas o doctores en botánica como William Vargas (Flora en general-Universidad Icesi, Cali), Rodrigo Bernal (Experto en la familia Arecaceae - Universidad Nacional de Colombia, Bogotá D.C, Instituto de Ciencias Naturales), Carlos Alberto Parra Osorio (Especialista en la familia Myrtaceae- Universidad Nacional de Colombia, Bogotá D.C, Instituto de Ciencias Naturales), José Luis Fernández Alonso (Especialista en las familias Malvaceae y Lamiaceae - Universidad Nacional de Colombia, Bogotá D.C, Instituto de Ciencias Naturales) y Diego Alonso Giraldo Canas (Especialista en la familia Poaceae - Universidad Nacional de Colombia, Bogotá D.C, Instituto de Ciencias Naturales) para dar mayor seguridad en cada especie citada en la presente investigación.</para>
+          </description>
+        </methodStep>
+        <methodStep>
+          <description>
+            <para>Análisis de la información: Por medio de la riqueza florística obtenida en el área de estudio se pudo  conocer los diferentes hábitos de crecimiento de las plantas, origen de las plantas (nativa- introducida), estado fenológico de las plantas (flores- frutos), ecología de las plantas (pioneras, pioneras intermedias y crecimiento lento o tardío), usos de las plantas, familias botánicas con mayor riqueza de especies, especies con mayor I.V.I por cuadrante, clases diamétricas y alturas, índices de diversidad y especies con algún grado de amenaza.</para>
+          </description>
+        </methodStep>
+        <methodStep>
+          <description>
+            <para>Oportunidades de conservación: En flora se propuso trabajar en la recuperación y conservación de aquellas especies con algún grado de amenaza y escasas o raras a nivel local.  Posteriormente definimos el valor de conservación construyendo rangos mediante percentiles, a partir de los datos obtenidos para cada uno de los criterios considerados. Generamos tres rangos (alto, medio y bajo) por cada criterio y les asignamos peso relativo de cinco, tres y uno respectivamente. Al final, el valor conservación para cada elemento era alto (mayor a 10 puntos), medio (entre 6 y 9 puntos) y bajo (menor a 5 puntos).</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>Se seleccionó un paisaje rural de 2703 Ha, ubicado en un gradiente altitudinal desde los 1000 y 2100 m de la cuenca del río San Pedro , entre los corregimientos de Buenos Aires, Pocitos y Los Chancos, en el Valle del Cauca. La cuenca del río San Pedro es afluente del río Cauca y se encuentra ubicada en la vertiente occidental de la cordillera Central. La zona ha sido clasificada como bosque tropical húmedo, con periodos de lluvia de marzo a junio y de septiembre a diciembre y una precipitación anual entre los 1000 y 1800 mm</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Se seleccionaron cinco elementos del paisaje, distribuidas de la siguiente manera: cuatro bosques secundarios entre 1800 y 2113 m, con diferentes estados de conservación en su estructura y composición florística, con árboles mayores de 15 m y un DAP mayor a 20cm. Cinco bosques riparios entre 1093 y 2054 m, con bosques al lado del cuerpo de agua, en la parte alta las cañadas tiene mayor cobertura vegetal y va disminuyendo con la altura, en la parte baja es muy seco, este bosque ripario tiene una extensión de más o menos 100 m a lado y lado de la cañada. Tres parches de sucesión vegetal avanzada entre 1954 y 2063 m, con hasta 15 años de edad y dominado por árboles pioneros, con DAP de 10 cm, y altura de 13 m de altura. Cuatro mosaicos de potreros y cultivos entre 1262 y 1840 m, y cuatro potreros arbolados entre 1062 y 1837 m. Se establecieron al azar 40 puntos o transectos en el paisaje. En cada elemento del paisaje seleccionado para caracterizar, se realizaron dos puntos de conteo en el cual en cada transecto (50 x 4 metros) se midieron los árboles y arbustos; en la medida de los árboles se midieron todos los individuos mayores o iguales a 5 cm de diámetro (d), 1.3 metros de altura (con su respectiva posición dentro del transecto)  y cada 10 metros (6 repeticiones) se calculaba la altura del dosel y en arbustos todos los individuos con diámetro entre 0.5 y 2.5 cm y a 50 cm del suelo. Adicional, a la anterior metodología se realizaron recorridos o caminatas para conocer de otras especies de flora que no se registraron en cada transecto y el estado de conservación de cada elemento del paisaje evaluado. Estos puntos (transectos) están separados por 150 metros de distancia.</para>
+        </samplingDescription>
+      </sampling>
+      <qualityControl>
+        <description>
+          <para>Debido a la experiencia y conocimiento que se tiene de la flora regional y nacional, la mayoría de las especies fueron determinadas directamente en campo y cuando se generaba alguna duda se colectaron algunos ejemplares botánicos para ser enviados a especialistas para su posterior determinación.  
+Sin embargo, aunque muchas especies  fueron determinadas directamente en campo se colectaron algunas muestras para su posterior envío y depósito en los herbarios del departamento.</para>
+        </description>
+      </qualityControl>
+  </methods>
+  <project>
+      <title>Identificación de oportunidades de conservación en una ventana de paisaje rural priorizada por la Corporación Autónoma Regional del Valle del Cauca CVC en el marco del convenio con el Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</title>
+    <personnel>
+      <individualName>
+          <givenName>Fabio</givenName>
+        <surName>Lozano</surName>
+      </individualName>
+      <role>principalInvestigator</role>
+    </personnel>
+    <funding>
+      <para>Corporación Autónoma Regional del Valle del Cauca CVC y el Instituto de Investigación de Recursos Biológicos Alexander von Humboldt. Contrato No. 13-13-166-295PS.</para>
+    </funding>
+    <studyAreaDescription>
+      <descriptor name="generic"
+                  citableClassificationSystem="false">
+        <descriptorValue>La Corporación Paisajes Rurales en asocio con la CVC, seleccionaron un paisaje rural de 2703 Ha, ubicado en un gradiente altitudinal desde los 1000 y 2100 m de la cuenca del río San Pedro, entre los corregimientos de Buenos Aires, Pocitos y Los Chancos, en el Valle del Cauca. La cuenca del río San Pedro es afluente del río Cauca y se encuentra ubicada en la vertiente occidental de la cordillera Central. La zona ha sido clasificada como bosque tropical húmedo, con periodos de lluvia de marzo a junio y de septiembre a diciembre y una precipitación anual entre los 1000 y 1800 mm.</descriptorValue>
+      </descriptor>
+    </studyAreaDescription>
+    <designDescription>
+      <description>
+          <para>Se realizó la caracterización florística de la subcuenca del Río San Pedro, como insumo para la identificación de oportunidades de conservación, a través del índice de valor de conservación que usa criterios biológicos como diversidad, endemismo y vulnerabilidad (Lozano et al., 2009), con el fin de generar una priorización que de los elementos del paisaje con el mayor número de especies de interés para la conservación y de esta manera enfocar sobre estos elementos las herramientas de manejo del paisaje, en una ventana de paisaje rural priorizada por la Corporación Autónoma Regional del Valle del Cauca CVC en el marco del convenio con el Instituto Alexander von Humboldt - IAvH.</para>
+      </description>
+    </designDescription>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2014-07-05T05:09:12.941-05:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation identifier="http://i2d.humboldt.org.co/ceiba/resource.do?r=sanpedro_flora_2014">Corporación Paisajes Rurales, Instituto de Investigación de Recursos Biológicos Alexander von Humboldt (2013). Caracterización florística de la subcuenca del Río San Pedro, San Pedro, Valle del Cauca. 334 registros, aportados por: Ramírez, W. (Contacto del recurso), Mendez, E. (Creador del recurso, Proveedor de metadatos, Autor), Buitrago-Giraldo, M. (Publicador), Lozano, F. (Autor). Versión 9.0. http://i2d.humboldt.org.co/ceiba/resource.do?r=sanpedro_flora_2014</citation>
+          <bibliography>
+                <citation>CUATRECASAS. J. 1958. Aspectos de la vegetación natural de Colombia. Rev. Acad. Coloma. Ci. Exact. 10 (40): 221-260</citation>
+                <citation>GENTRY, Alwin, 1993. A fiel guide to the families and genera of woody plants of northwest South America. Washington, conservación international.</citation>
+                <citation identifier="http://www.humboldt.org.co/conservacion/plantas-amenazadas.htm">IavH, Instituto de Investigaciones de Recursos Biológicos Alexander von Humboldt. 2004. Listas rojas  reliminaries de plantas vasculares  de Colombia. (0n-line)</citation>
+                <citation>KRESS, J, et al 1999. Heliconias, llamaradas de la selva. Cristina Uribe. Editores. Bogotá, 191 p</citation>
+                <citation>MÉNDEZ E. Y CALLE Z. 2007. Libro guía – Árboles y arbustos del río La Vieja. Fundación CIPAV</citation>
+                <citation>MÉNDEZ, E. 2002-2007. Caracterización florística de remanentes de vegetación en la parte media del río La Vieja en los departamentos del Quindío y Valle del Cauca. Proyecto,   Enfoques Silvopastoriles Integrados para El Manejo de Ecosistemas. Fundación CIPAV, Cali</citation>
+                <citation>MENDOZA, H, et al. 2003. Rubiaceae de Colombia – Guía ilustrada de géneros. Instituto de Investigación de Recursos Biológicos Alexander von Humboldt – Programa de inventarios de Biodiversidad, Grupo de Exploración y Monitoreo Ambiental – GEMA. Santafé de Bogotá, 351 p.</citation>
+                <citation>Lozano-Zambrano, F. H. (ed). 2009. Herramientas de manejo para la conservación de biodiversidad en paisajes rurales. Instituto de Investigación de Recursos Biológicos Alexander von Humboldt y Corporación Autónoma Regional de Cundinamarca (CAR). Bogotá, D. C., Colombia. 238 p.</citation>
+                <citation>SAAVEDRA, C.J. y C.FREESE.1986. Prioridades biológicas de conservación en los Andes tropicales. Pp 31-36. En Conservando el patrimonio natural de la región neotropical. (E.Cardich ed.) Unión Internacional para la Conservación de la Naturaleza y de los Recursos naturales</citation>
+                <citation>Renjifo, L. M., F. H. Lozano, Rios, C. I., Caycedo, P. C., Mendoza, J. E., Ramírez, D. P., Vargas, W., Quevedo F. L., Franco, L. E. &amp; Cardona, P. J. 2003. Caracterización Biológica y Socioeconómica de la Ventana de Paisaje Rural Ganadero en el Cañón del Río Barbas (Filandia – Quindío)- Informe técnico preliminar. Instituto de Investigación de Recursos Biológicas “Alexander Von Humboldt”, Armenia, 2003.</citation>
+                <citation>UNIÓN INTERNACIONAL PARA LA CONSERVACIÓN DE LA NATURALEZA. 2004. Lista Roja Preliminar de plantas vasculares, extintas, en peligro o en duda. 25 p</citation>
+                <citation>VAN DER HAMMEN, T.1974. The pleistocene changes of vegetation and climate in tropical South America. J.Biogepgraphy, 1:3-26</citation>
+          </bibliography>
+            <physical>
+              <objectName>Caracterización florística de la subcuenca del Río San Pedro, San Pedro, Valle del Cauca</objectName>
+              <characterEncoding>UTF-8</characterEncoding>
+              <dataFormat>
+                <externallyDefinedFormat>
+                  <formatName>txt</formatName>
+                </externallyDefinedFormat>
+              </dataFormat>
+              <distribution>
+                <online>
+                  <url function="download">http://doi.org/10.15472/luwleo</url>
+                </online>
+              </distribution>
+            </physical>
+          <collection>
+            <parentCollectionIdentifier>Herbario Universidad Icesi</parentCollectionIdentifier>
+            <collectionIdentifier>E. Mendez (M.E)</collectionIdentifier>
+            <collectionName>Corporación Paisajes Rurales (CPR)</collectionName>
+          </collection>
+          <specimenPreservationMethod>driedAndPressed</specimenPreservationMethod>
+          <dc:replaces>http://i2d.humboldt.org.co/ceiba/resource.do?id=sanpedro_flora_2014/v8.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
