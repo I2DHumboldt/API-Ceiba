@@ -26,7 +26,29 @@ npm install
 
 ## Configuración
 
-Toda la configuración de la aplicación se define en la carpeta `config`. Siga las instrucciones del [README.md](https://github.com/I2DHumboldt/api-data-importer/tree/master/config) de esta carpeta. 
+Toda la configuración de la aplicación se define en la carpeta `config`. Para modificar el comportamiento del proceso de importación de los datos siga las instrucciones del [README.md](https://github.com/I2DHumboldt/api-data-importer/tree/master/config) de esta carpeta. 
+
+La configuración básica necesaria es la definición del origen y el destino de los datos a importar. Estos parámetros se deben editar en el archivo [config/config.json](config/config.json). Por ejemplo, usando la configuración por defecto, el sistema tratará de importar en la base de datos de ElasticSearch que se encuentra en "localhost:9200" y sobre el índice sibdataportal, desde la carpeta de datos de prueba [data-test/resource/](data-test/resource/) que contiene 2 recursos para importar.
+
+``` js
+{
+  "database": {
+    "elasticSearch":{
+      "url": ["localhost:9200"],
+      "index": "sibdataportal"
+    }
+  },
+  "source": "./data-test/resource/",
+  "log":{
+    "env": "production",
+    "filename": "./logs/ceiba-data-importer.log"
+  }
+}
+```
+### logger con Wiston
+
+Adicionalmente en este archivo de configuración se definen los parámetros para los mensajes (log) del proceso. 
+Hay 2 tipos de tipo de ejecusión, que se pueden definir para el logger del proceso, cambiando el valor de la variable log.env: 'production', que almacena todos los mensajes del logger en el archivo especficado por `filename` (por defecto en `./logs/ceiba-data-importer.log`) o 'development', que lanza todos los mensajes de error sobre la consola del sistema. El tipo de ejecusión por defecto es 'production'. 
 
 ## Ejecución
 
