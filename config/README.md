@@ -24,7 +24,7 @@ se debe transferir esta base de datos al cluster de producción_
 }
 ```
 
-## published.json
+## publisher.json
 
 Los datos del **Instituto Humboldt** como publicador de información. Esta información se agrega a cada registro de la
-base de datos para hacerlo compatible con el API del SIB Colombia.
+base de datos para hacerlo compatible con el API del SIB Colombia. Puede editarlos si es necesario.
