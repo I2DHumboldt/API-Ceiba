@@ -83,7 +83,7 @@ y después se hace apuntar el alias sibdataportal a la base de datos sibdataport
 	{
 	    "actions" : [
 	        { "remove" : { "index" : "sibdataportalv1", "alias" : "sibdataportal" } },
-	        { "add" : { "index" : "sibdataportalv2", "alias" : "alias1" } }
+	        { "add" : { "index" : "sibdataportalv2", "alias" : "sibdataportal" } }
 	    ]
 	}
 ```
