@@ -7,9 +7,11 @@ del servidor de CEIBA (en formato Darwin-Core), sobre una base de datos de Elast
 
 Software  | Versión | Instrucciones de instalación
 ------------- | ------------- | -------------
-Java | 1.8 o superior | [https://www.java.com/en/download/]
-ElasticSearch | 5 | [https://www.elastic.co/products/elasticsearch]
-Kibana (Optional) | 5 | [https://www.elastic.co/products/kibana]
+Java | 1.8 o superior | (https://www.java.com/en/download/)
+ElasticSearch | 5 | (https://www.elastic.co/products/elasticsearch)
+Kibana (Optional) | 5 | (https://www.elastic.co/products/kibana)
+NodeJS | 4 o superior | (https://nodejs.org/en/download/)
+NPM | 3.10.6 o superior | (https://docs.npmjs.com/getting-started/installing-node)
 
 * Después de instalar Java se deben exportar las el JAVA_HOME. Ejemplo:
 
