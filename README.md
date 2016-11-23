@@ -45,6 +45,18 @@ La configuración básica necesaria es la definición del origen y el destino de
   }
 }
 ```
+
+Los parámetros definidos aquí para la base de datos de ElasticSearch, deben ser los mismos que los definidos en el script que prepara la base de datos. Para esto debe editar el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) que exporta la URL de ElasticSearch y el índice a las variables de entorno del sistema.
+
+```
+export ESDBHOST=localhost:9200
+export ESINDEX=sibdataportal
+
+...
+
+```
+
+
 ### logger con Wiston
 
 Adicionalmente en este archivo de configuración se definen los parámetros para los mensajes (log) del proceso. 
@@ -56,6 +68,8 @@ El tipo de ejecusión por defecto es 'production'.
 ## Ejecución
 
 ### Preparar la base de datos de ElasticSearch para la importación
+
+Esta script limpia la base de datos de elasticSearch donde se almacenarán los datos de la importación y crear los mapping respectivos de `occurrence` y `resource`. Para mayores detalles consulte consulte la documentación de [dbscripts](dbscripts)
 
 ``` bash
 nmp run prepare
