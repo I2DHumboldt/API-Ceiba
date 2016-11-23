@@ -4,6 +4,5 @@
 .idea/jsLibraryMappings.xml
 
 .idea/vcs.xml
-/logs/ceiba-data-importer.log
 node_modules
 logs/ceiba-data-importer.log
