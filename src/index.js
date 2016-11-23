@@ -4,7 +4,7 @@
  */
 const fs = require('fs');
 const documentCreator = require('./documentCreator');
-const _config = require('../config/config.json');
+const _config = require('../../config/application-config');
 const logger = require('./log');
 
 /**
@@ -12,7 +12,7 @@ const logger = require('./log');
  * each in the ElasticSearch (_config.database.elasticSearch) database.
  */
 //module.exports = function(){
-    var resourcesFolder = _config.source;
+    var resourcesFolder = _config.get('source');
     if( !resourcesFolder.endsWith("/") )
         resourcesFolder += "/";
     var files = fs.readdirSync(resourcesFolder);
@@ -21,7 +21,7 @@ const logger = require('./log');
         //For each folder in the resources folder proceed to importation
         if(fs.lstatSync(resourcesFolder+f).isDirectory()) {
             logger.info("Importing from: "+resourcesFolder+f+"/");
-            let nDocs = documentCreator(resourcesFolder+f+"/", index++, _config.database.elasticSearch);
+            let nDocs = documentCreator(resourcesFolder+f+"/", index++);
             logger.info("occurrences imported: "+nDocs);
         }
     });

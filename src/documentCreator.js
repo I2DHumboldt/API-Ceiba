@@ -13,15 +13,16 @@ const resourceMapper = require('./../config/mappers/resourceMapper.json');
 const filterOccurrence = require('./filters/occurrence');
 const filterOccResource = require('./filters/occResource');
 const filterResource = require('./filters/resource');
-const publisher = require('./../config/publisher.json');
+const publisher = require('./../config/info/publisher.json');
 const logger = require('./log');
+const _config = require('../../config/application-config');
 
 
-module.exports = function(folderToProcess, resourceID, elasticSearch){
+module.exports = function(folderToProcess, resourceID){
     let documentCount = 0;
     try{
         const clientElastic = new elasticsearch.Client({
-            host: elasticSearch.url
+            host: _config.get('database.elasticSearch.url')
         });
 
         let dwac = dwacParser.loadFromFolder(folderToProcess, {
@@ -55,7 +56,7 @@ module.exports = function(folderToProcess, resourceID, elasticSearch){
 
         //Save the resource information
         clientElastic.create({
-            index: elasticSearch.index,
+            index: _config.get('database.elasticSearch.index'),
             type: 'resource',
             method: 'post',
             id: sourcefileid,
@@ -79,7 +80,7 @@ module.exports = function(folderToProcess, resourceID, elasticSearch){
                 doc['resource'] = occResource;
                 Object.assign(doc.collection, collection);
                 clientElastic.create({
-                    index: elasticSearch.index,
+                    index: _config.get('database.elasticSearch.index'),
                     type: 'occurrence',
                     id: doc['occurrenceid'],
                     body: doc

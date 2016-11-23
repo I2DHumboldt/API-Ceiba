@@ -6,8 +6,6 @@
     }
   },
   "source": "./data-test/resource/",
-  "log":{
-    "env": "production",
-    "filename": "./logs/ceiba-data-importer.log"
-  }
+  "logs": "./logs/ceiba-data-importer.log",
+  "env": "production"
 }
