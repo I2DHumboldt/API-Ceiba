@@ -28,9 +28,14 @@ npm install
 
 ## Configuración
 
-Toda la configuración de la aplicación se define en la carpeta `config`. Para modificar el comportamiento del proceso de importación de los datos siga las instrucciones del [README.md](https://github.com/I2DHumboldt/api-data-importer/tree/master/config) de esta carpeta. 
+Toda la configuración de la aplicación se define en la carpeta `config`. Para modificar el comportamiento del proceso de 
+importación de los datos siga las instrucciones del [README.md](https://github.com/I2DHumboldt/api-data-importer/tree/master/config) de esta carpeta. 
 
-La configuración básica necesaria es la definición del origen y el destino de los datos a importar. Estos parámetros se deben editar en el archivo [config/config.json](config/config.json). Por ejemplo, usando la configuración por defecto, el sistema tratará de importar en la base de datos de ElasticSearch que se encuentra en "localhost:9200" y sobre el índice sibdataportal, desde la carpeta de datos de prueba [data-test/resource/](data-test/resource/) que contiene 2 recursos para importar.
+La configuración básica necesaria, es la definición del origen y el destino de los datos a importar. Estos parámetros se 
+pueden editar en el archivo [config/config.json](config/config.json), pero serán sobre-escritos por los valores de las variables de 
+entorno para esas mismas variables (Ver las instrucciones de la carpeta [config](https://github.com/I2DHumboldt/api-data-importer/tree/master/config)).
+Por defecto el sistema tratará de importar en la base de datos de ElasticSearch que se encuentra en "localhost:9200" y sobre el índice 
+sibdataportal, desde la carpeta de datos de prueba [data-test/resource/](data-test/resource/) que contiene 2 recursos para importar.
 
 ``` js
 {
@@ -48,8 +53,9 @@ La configuración básica necesaria es la definición del origen y el destino de
 }
 ```
 
+**Nota**: _Esta configuración eso para pruebas!!!_
 Los parámetros definidos aquí para la base de datos de ElasticSearch, deben ser los mismos que los definidos en el script que prepara la base de datos. 
-Para esto deben exportar las variables de entorno **ESDBHOST** y  **ESINDEX** que espera el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) 
+Par esto, si se quiere modificar la configuración de la aplicación, la forma correcta es exportar las variables de entorno **ESDBHOST** y  **ESINDEX** que espera el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) 
 Si las variables de entorno no se definen antes de ejecutar el script, se exportarán las variables con los valores por defecto:
 
 ```

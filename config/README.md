@@ -8,7 +8,7 @@ En esta carpeta se encuentra:
 ## config-convict.js
 
 La configuración de la aplicación se hace en el archivo de configuración `config/config-convict.js` que usa el manejador
-de configuraciones [convit](https://www.npmjs.com/package/convict). Los parámetros de configuración se 
+de configuraciones [convict](https://www.npmjs.com/package/convict). Los parámetros de configuración se 
 listan en el siguiente JSON.
 
 ``` js
@@ -33,7 +33,7 @@ listan en el siguiente JSON.
         elasticSearch: {
             url: {
                 doc: 'ElasticSearch url to connect to (without including db reference)',
-                default: ['localhost:9200'],
+                default: 'localhost:9200',
                 env: 'ESDBHOST'
             },
             index: {
