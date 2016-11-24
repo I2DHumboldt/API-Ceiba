@@ -67,10 +67,10 @@ export ESINDEX=sibdataportal
 ### logger con Wiston
 
 Adicionalmente en este archivo de configuración se definen los parámetros para los mensajes (log) del proceso. 
-Hay 2 tipos de tipo de ejecusión, que se pueden definir para el logger del proceso, cambiando el valor de la variable 
-log.env: 'production', que almacena todos los mensajes del logger en el archivo especficado por `filename` (por defecto 
+Hay 2 tipos de tipo de ejecución, que se pueden definir para el logger del proceso, cambiando el valor de la variable 
+log.env: 'production', que almacena todos los mensajes del logger en el archivo especificado por `filename` (por defecto 
 en `./logs/ceiba-data-importer.log`) o 'development', que lanza todos los mensajes de error sobre la consola del sistema. 
-El tipo de ejecusión por defecto es 'production'. 
+El tipo de ejecución por defecto es 'production'. 
 
 ## Ejecución
 
