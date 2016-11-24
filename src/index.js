@@ -4,7 +4,7 @@
  */
 const fs = require('fs');
 const documentCreator = require('./documentCreator');
-const _config = require('../../config/application-config');
+const _config = require('../config/config-convict');
 const logger = require('./log');
 
 /**

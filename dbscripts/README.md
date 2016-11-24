@@ -3,7 +3,7 @@
 Esta carpeta contiene los scripts para definir los mapping de elasticsearch. La secuencia de comandos comienza
 borrando los datos anteriores. Después crea el mapeo de la estructura de las occurrencias y la estructura de los
 resources. 
-Este script debe ejecutarse antes de comenzar la migración de los datos
+Este script debe ejecutarse antes de comenzar la migración de los datos.
 
 ## script
 

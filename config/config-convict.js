@@ -1,10 +1,9 @@
 // Dependencies
-import convict from 'convict';
-import util from 'util';
-
+const convict = require('convict');
+const util = require('util');
 const path = require('path');
 
-export const config = convict({
+const config = convict({
     env: {
         doc: 'Application environment.',
         format: ['production', 'development'],
@@ -25,7 +24,7 @@ export const config = convict({
         elasticSearch: {
             url: {
                 doc: 'ElasticSearch url to connect to (without including db reference)',
-                default: ['localhost:9200'],
+                default: 'localhost:9200',
                 env: 'ESDBHOST'
             },
             index: {
@@ -39,15 +38,12 @@ export const config = convict({
 
 // catch all error without handler
 process.on('uncaughtException', error => {
-    debug(`Caught exception without specific handler: ${util.inspect(error)}`);
-    debug(error.stack, 'error');
+    console.log(`Caught exception without specific handler: ${util.inspect(error)}`);
+    console.log(error.stack, 'error');
     process.exit(1);
 });
 
-// print the environment for debugging
-debug(util.inspect(process.env, {
-    colors: true
-}));
-
 // perform the config validation
 config.validate();
+
+module.exports = config;

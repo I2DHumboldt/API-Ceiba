@@ -36,7 +36,7 @@ La configuración básica necesaria es la definición del origen y el destino de
 {
   "database": {
     "elasticSearch":{
-      "url": ["localhost:9200"],
+      "url": "localhost:9200",
       "index": "sibdataportal"
     }
   },
@@ -48,7 +48,9 @@ La configuración básica necesaria es la definición del origen y el destino de
 }
 ```
 
-Los parámetros definidos aquí para la base de datos de ElasticSearch, deben ser los mismos que los definidos en el script que prepara la base de datos. Para esto debe editar el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) que exporta la URL de ElasticSearch y el índice a las variables de entorno del sistema.
+Los parámetros definidos aquí para la base de datos de ElasticSearch, deben ser los mismos que los definidos en el script que prepara la base de datos. 
+Para esto deben exportar las variables de entorno **ESDBHOST** y  **ESINDEX** que espera el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) 
+Si las variables de entorno no se definen antes de ejecutar el script, se exportarán las variables con los valores por defecto:
 
 ```
 export ESDBHOST=localhost:9200

@@ -15,7 +15,7 @@ const filterOccResource = require('./filters/occResource');
 const filterResource = require('./filters/resource');
 const publisher = require('./../config/info/publisher.json');
 const logger = require('./log');
-const _config = require('../../config/application-config');
+const _config = require('../config/config-convict');
 
 
 module.exports = function(folderToProcess, resourceID){

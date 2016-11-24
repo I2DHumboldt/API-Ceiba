@@ -5,9 +5,9 @@ En esta carpeta se encuentra:
 2. [La configuración del origen y destino de los datos](config.json)
 3. [Los parámetros del publicador de los datos](publisher.json)
 
-## config.js
+## config-convict.js
 
-La configuración de la aplicación se hace en el archivo de configuración `config/config.js` que usa el manejador
+La configuración de la aplicación se hace en el archivo de configuración `config/config-convict.js` que usa el manejador
 de configuraciones [convit](https://www.npmjs.com/package/convict). Los parámetros de configuración se 
 listan en el siguiente JSON.
 

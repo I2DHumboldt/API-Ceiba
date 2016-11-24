@@ -3,7 +3,7 @@
  * Created by acastillo on 11/16/16.
  */
 const winston = require('winston');
-const _config = require('../../config/application-config');
+const _config = require('../../config/config-convict');
 
 let logger2 = new(winston.Logger)({
     transports: [
