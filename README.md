@@ -105,14 +105,19 @@ Para esto se recomienda usar la librería https://www.npmjs.com/package/elasticd
 npm install elasticdump -g
 ```
 
-#### Copiar un índice  la base de datos de desarrollo a la de producción con analyzer y mapping:
+#### Copiar un índice de la base de datos de desarrollo a la de producción con analyzer y mapping:
 
-Usando elasticdump:
+Usando elasticdump. 
+
+Cada vez se debe copiar la base de datos de prueba sobre un índice diferente al último. Es decir, si la vez 
+anterior se importó sobre **sibdataportalv1**, esta vez deberá importar los datos sobre **sibdataportalv2**,
+de esta forma evita que el sistema tenga periodos de tiempo muertos.
+
 
 ``` bash
 elasticdump \
   --input=http://staging.es.com:9200/sibdataportal \
- 	 --output=http://production.es.com:9200/sibdataportalv2 \
+  --output=http://production.es.com:9200/sibdataportalv2 \
   --type=analyzer
 
 elasticdump \
@@ -126,26 +131,19 @@ elasticdump \
   --type=data
 ```
 
-A partir de la version 2.3 se puede usar la función de [_reindex](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html) de ElasticSearch:
+Para facilitar la labor de migración se ha implementado en [dbscripts/elasticdump.sh](dbscripts/elasticdump.sh) un
+script para realizar la migración de forma asistida. 
+Para realizar la migración de su base de datos local que está en _http://localhost:9200/sibdataportal_ sobre la base de 
+datos de producción localizada en __http://192.168.0.77:9200/sibdataportal2__ debe ejecutar la siguiente línea de comandos
+ 
 
+``` bash
+./dbscripts/elasticdump.sh http://localhost:9200/sibdataportal http://192.168.0.77:9200/sibdataportal2
 ```
-POST _reindex
-{
-  "source": {
-    "remote": {
-      "host": "http://otherhost:9200",
-      "username": "user",
-      "password": "pass"
-    },
-    "index": "sibdataportal",
-  },
-  "dest": {
-    "index": "sibdataportalv2"
-  }
-}
-```
+Lea las instrucciones de la carpeta [dbscripts/elasticdump.sh](dbscripts/elasticdump.sh) si necesita más información.
 
-y después se hace apuntar el alias sibdataportal a la base de datos sibdataportalv2. Después se puede borrar la versión anterior sibdataportal1. Ej:
+Una vez migrado el índice a las base de datos de producción, es necesario hacer apuntar el alias **sibdataportal** 
+a la recién creada sibdataportalv2. Después se puede borrar la versión anterior sibdataportal1. Ej:
 
 ```
 	POST /_aliases
@@ -156,6 +154,8 @@ y después se hace apuntar el alias sibdataportal a la base de datos sibdataport
 	    ]
 	}
 ```
+
+!!!Estos pasos son críticos y no se deben automatizar. Deben estar supervisados por una persona !!!
 
 # Anexos
 
