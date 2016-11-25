@@ -18,11 +18,11 @@ const logger = require('./log');
 const _config = require('../config/config-convict');
 
 
-module.exports = function(folderToProcess, resourceID){
-    let documentCount = 0;
+function create(folderToProcess, resourceID){
     try{
         const clientElastic = new elasticsearch.Client({
-            host: _config.get('database.elasticSearch.url')
+            host: _config.get('database.elasticSearch.url'),
+            requestTimeout : Infinity
         });
 
         let dwac = dwacParser.loadFromFolder(folderToProcess, {
@@ -54,6 +54,12 @@ module.exports = function(folderToProcess, resourceID){
             return;
         }
 
+        /*for(var k = 15481; k < 15482; k ++) {
+            //if(!filterOccurrence(occurrence[k]).eventdate_start)
+                console.log(k,filterOccurrence(occurrence[k]));
+
+            //console.log(filterOccurrence(occurrence[k].eventdate_start), filterOccurrence(occurrence[k].eventdate_end));
+        }*/
         //Save the resource information
         clientElastic.create({
             index: _config.get('database.elasticSearch.index'),
@@ -71,8 +77,13 @@ module.exports = function(folderToProcess, resourceID){
             }
         });
 
+
         //Save the occurrences
+        let occurrenceKey = 0;
+        var documentCount = 0;
         occurrence.forEach(function(doc) {
+            documentCount++;
+            let documentCountLet = documentCount;
             if(doc){
                 doc = filterOccurrence(doc);
                 doc['sourcefileid'] = sourcefileid;
@@ -82,20 +93,20 @@ module.exports = function(folderToProcess, resourceID){
                 clientElastic.create({
                     index: _config.get('database.elasticSearch.index'),
                     type: 'occurrence',
-                    id: doc['occurrenceid'],
+                    id: sourcefileid + '_' + occurrenceKey++,
                     body: doc
                 }, function (error, response) {
                     //@TODO Sent to logger
                     if(error) {
-                        logger.log("error", 'Error saving occurrence '+documentCount, error);
+                        logger.log("error", 'Error saving occurrence '+documentCountLet, error);
                     }
                     else{
-                        logger.log("info", sourcefileid+" "+sourcefileid+" "+documentCount);
-                        documentCount++;
+                        logger.log("info", sourcefileid+" "+sourcefileid+" "+documentCountLet);
                     }
                 });
             }
         });
+
         return occurrence.length;
     }
     catch(generalError){
@@ -104,4 +115,6 @@ module.exports = function(folderToProcess, resourceID){
 
     return 0;
 }
+
+module.exports = create;
 

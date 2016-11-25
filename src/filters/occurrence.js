@@ -2,53 +2,61 @@
 /**
  * Created by acastillo on 11/13/16.
  */
-const fixDate = require("../util/fixDate");
+const fixDate = require('../util/fixDate');
 const logger = require('../log');
 
 
-module.exports = function(occurrence) {
+function filterOccurrence(occurrence) {
     try{
-        /*occurrence["group"] = ["humboldt"];
+        /*occurrence['group'] = ['humboldt'];
         if(Math.random() > 0.5)
-            occurrence["group"].push("guess");*/
+            occurrence['group'].push('guess');*/
 
-        if(occurrence["location"]) {
-            occurrence["location"]["lat"] = +occurrence["location"]["lat"];
-            occurrence["location"]["lon"] = +occurrence["location"]["lon"]
+        //This is an important field and can only be parse if it exists and it is complete
+        if(occurrence['location']) {
+            if(occurrence['location']['lat'] && occurrence['location']['lon']) {
+                occurrence['location']['lat'] = +occurrence['location']['lat'];
+                occurrence['location']['lon'] = +occurrence['location']['lon'];
+            } else {
+                delete occurrence['location'];
+            }
+
         }
-        if(occurrence["maximum_elevation"])
-            occurrence["maximum_elevation"] = +occurrence["maximum_elevation"];
-        if(occurrence["minimum_elevation"])
-            occurrence["minimum_elevation"] = +occurrence["minimum_elevation"];
-        if(occurrence["maximum_depth"])
-            occurrence["maximum_depth"] = +occurrence["maximum_depth"];
-        if(occurrence["minimum_depth"])
-            occurrence["minimum_depth"] = +occurrence["minimum_depth"];
+        if(occurrence['maximum_elevation'])
+            occurrence['maximum_elevation'] = +occurrence['maximum_elevation'];
+        if(occurrence['minimum_elevation'])
+            occurrence['minimum_elevation'] = +occurrence['minimum_elevation'];
+        if(occurrence['maximum_depth'])
+            occurrence['maximum_depth'] = +occurrence['maximum_depth'];
+        if(occurrence['minimum_depth'])
+            occurrence['minimum_depth'] = +occurrence['minimum_depth'];
 
-        if(occurrence["event_date"]){
-            let eventDates = occurrence["event_date"].split("/");
+        if(occurrence['event_date']){
+            let eventDates = occurrence['event_date'].split('/');
             if(eventDates[0]){
                 let date = fixDate(eventDates[0]);
-                occurrence["eventdate_start"] = date;
+                occurrence['eventdate_start'] = date;
                 date = new Date(date);
-                occurrence["days_tart"] = date.getDate();
-                occurrence["month_start"] = date.getMonth();
-                occurrence["year_start"] = date.getFullYear();
+                occurrence['days_tart'] = date.getUTCDate();
+                occurrence['month_start'] = date.getUTCMonth()+1;
+                occurrence['year_start'] = date.getUTCFullYear();
             }
             if(eventDates[1]){
                 let date = fixDate(eventDates[1]);
-                occurrence["eventdate_end"] = date;
+                occurrence['eventdate_end'] = date;
                 date = new Date(date);
-                occurrence["day_end"] = date.getDate();
-                occurrence["month_end"] = date.getMonth();
-                occurrence["year_end"] = date.getFullYear();
+                occurrence['day_end'] = date.getUTCDate();
+                occurrence['month_end'] = date.getUTCMonth()+1;
+                occurrence['year_end'] = date.getUTCFullYear();
             }
-            delete occurrence["event_date"];
+            delete occurrence['event_date'];
         }
     }
     catch (e){
-        logger.log("warn","Could not properly convert the occurrence", occurrence)
+        logger.log('warn','Could not properly convert the occurrence', occurrence)
     }
 
     return occurrence;
 }
+
+module.exports = filterOccurrence;

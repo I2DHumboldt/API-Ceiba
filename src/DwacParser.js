@@ -16,9 +16,12 @@ const get = require('get-value');
 function occurrenceConverter(filename, mapper) {
     let lines = fs.readFileSync(filename).toString().split('\n');
     let head = (lines.splice(0, 1))[0].split("\t");//Get the header
+    //Remove the last line if empty. Most of the csv end with a blank line
+    if(lines[lines.length-1].length === 0){
+        lines.splice(lines.length-1, 1);
+    }
 
     let column2Alias = {};
-    let result = new Array(lines.length);
     //Convert column names to column indexes and alias
     head.forEach(function(value, index) {
         var alias = mapper[value];
@@ -30,7 +33,7 @@ function occurrenceConverter(filename, mapper) {
         }
     });
     //Convert each row in a JSON and return;
-    let collection = lines.map(function(row, index) {
+    let collection = lines.map(function(row) {
         let columns = row.split("\t");
         if(columns.length > 1){
             let doc = {};
@@ -43,7 +46,7 @@ function occurrenceConverter(filename, mapper) {
             });
             return doc;
         }
-        return null;
+        //return null;
     });
 
     return collection;

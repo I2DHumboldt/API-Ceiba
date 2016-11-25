@@ -30,7 +30,8 @@
     "istanbul": "^1.0.0-alpha",
     "mocha": "^3.0.2",
     "mocha-better-spec-reporter": "^3.0.2",
-    "should": "^11.1.0"
+    "should": "^11.1.0",
+    "superagent": "3.0.0"
   },
   "dependencies": {
     "xml2js": "^0.4.17",

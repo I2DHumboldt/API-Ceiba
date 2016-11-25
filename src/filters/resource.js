@@ -4,7 +4,7 @@
  */
 const fixDate = require("../util/fixDate");
 
-module.exports = function(resource){
+function filterResource(resource){
     //Add the missing fields and transform fields
     //@TODO Check this with the supervisor
     resource["publication_date"] = fixDate(resource["publication_date"]);
@@ -53,4 +53,4 @@ function contactFilter(resource, contact, rol) {
     }
 }
 
-
+module.exports = filterResource;

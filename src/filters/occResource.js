@@ -4,7 +4,7 @@
  */
 const fixDate = require("../util/fixDate");
 
-module.exports = function(resource){
+function filterOcResource(resource){
     resource["publication_date"] = fixDate(resource["publication_date"]);
     //Add the access group for the resource based on the intelectual rights
     resource["group"] = ["super"];// By default is only accessible for the super users
@@ -32,3 +32,5 @@ module.exports = function(resource){
     }
     return resource;
 }
+
+module.exports = filterOcResource;

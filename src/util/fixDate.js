@@ -2,11 +2,11 @@
  * This function validates the dates
  * Created by acastillo on 11/13/16.
  */
-module.exports = function(date) {
+function fixDate(date) {
     try{
-        var day = new Date(date).getDate();
-        var month = new Date(date).getMonth();
-        var year = new Date(date).getFullYear();
+        var day = new Date(date).getUTCDate();
+        var month = new Date(date).getUTCMonth() + 1;
+        var year = new Date(date).getUTCFullYear();
 
         if(day < 1) {
             day = 1;
@@ -29,7 +29,9 @@ module.exports = function(date) {
         return year+'-'+month+'-'+day;
     }
     catch(e){
-        return null;
+        return '1979-1-1';
     }
-
 }
+
+module.exports = fixDate;
+
