@@ -68,7 +68,7 @@ export ESINDEX=sibdataportal
 ### logger con Wiston
 
 Adicionalmente en este archivo de configuración se definen los parámetros para los mensajes (log) del proceso. 
-Hay 2 tipos de tipo de ejecución, que se pueden definir para el logger del proceso, cambiando el valor de la variable 
+Hay 2 tipos de ejecución, que se pueden definir para el logger del proceso, cambiando el valor de la variable 
 log.env: 'production', que almacena todos los mensajes del logger en el archivo especificado por `filename` (por defecto 
 en `./logs/ceiba-data-importer.log`) o 'development', que lanza todos los mensajes de error sobre la consola del sistema. 
 El tipo de ejecución por defecto es 'production'. 
@@ -77,7 +77,7 @@ El tipo de ejecución por defecto es 'production'.
 
 ### Preparar la base de datos de ElasticSearch para la importación
 
-Esta script limpia la base de datos de elasticSearch donde se almacenarán los datos de la importación y crear los mapping respectivos de `occurrence` y `resource`. Para mayores detalles consulte consulte la documentación de [dbscripts](dbscripts)
+Este script limpia la base de datos de elasticSearch donde se almacenarán los datos de la importación y crea los mapping respectivos de `occurrence` y `resource`. Para mayores detalles consulte la documentación de [dbscripts](dbscripts)
 
 ``` bash
 nmp run prepare
@@ -108,10 +108,7 @@ npm install elasticdump -g
 
 #### Copiar un índice de la base de datos de desarrollo a la de producción con analyzer y mapping:
 
-Usando elasticdump. 
-
-Cada vez se debe copiar la base de datos de prueba sobre un índice diferente al último. Es decir, si la vez anterior se importó sobre **sibdataportalv1**, esta vez deberá importar los datos sobre **sibdataportalv2**, de esta forma evita que el sistema tenga periodos de tiempo muertos.
-
+Cada vez se debe copiar la base de datos de prueba sobre un índice diferente al último. Es decir, si la vez anterior se importó sobre **sibdataportalv1**, esta vez deberán importar los datos sobre **sibdataportalv2**, de esta forma evita que el sistema tenga periodos de tiempo muertos.
 
 ``` bash
 elasticdump \
