@@ -1,0 +1,317 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd"
+         packageId="http://i2d.humboldt.org.co/ceiba/resource.do?id=hemiptera_coleccion_iavh/v8" system="http://gbif.org" scope="system"
+         xml:lang="spa">
+
+<dataset>
+  <alternateIdentifier>1c1cca0f-e37b-41eb-99e5-176c9503773b</alternateIdentifier>
+  <alternateIdentifier>http://doi.org/10.15472/9uy1eh</alternateIdentifier>
+  <alternateIdentifier>http://i2d.humboldt.org.co/ceiba/resource.do?r=hemiptera_coleccion_iavh</alternateIdentifier>
+  <title xml:lang="spa">Cicadelidos (Hemiptera: Cicadellidae) de Colección Entomológica del Instituto Alexander von Humboldt</title>
+<creator>
+    <individualName>
+        <givenName>Kevin-Giancarlo</givenName>
+      <surName>Borja-Acosta</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Administrador Datos Colecciones Biológicas</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>kborja@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+</creator>
+<metadataProvider>
+    <individualName>
+        <givenName>Kevin-Giancarlo</givenName>
+      <surName>Borja-Acosta</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Administrador Datos Colecciones Biológicas</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>kborja@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+</metadataProvider>
+    <associatedParty>
+    <individualName>
+        <givenName>Claudia</givenName>
+      <surName>Múnera-Roldán</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Ex Administrador Datos Colecciones Biológicas</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <postalCode>57</postalCode>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>cmunera@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+    <role>user</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Diego</givenName>
+      <surName>Moreno</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Ex Infraestructura informática colecciones biológicas</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>dmoreno@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+    <role>programmer</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Claudia Alejandra</givenName>
+      <surName>Medina</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Dirección Colecciones Biológicas</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <postalCode>57</postalCode>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>camedina@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+    <role>custodianSteward</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Fabio-Arturo</givenName>
+      <surName>Gonzalez</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Curador de la colección Entomologica</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <postalCode>57</postalCode>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>fgonzalez@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humborldt.org.co</onlineUrl>
+    <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Luis Edier</givenName>
+      <surName>Franco</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Asistente de Investigación 1</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <postalCode>57</postalCode>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>lefranco@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humborldt.org.co</onlineUrl>
+    <role>processor</role>
+    </associatedParty>
+    <associatedParty>
+    <individualName>
+        <givenName>Miguel</givenName>
+      <surName>Torres</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Asistente de Investigación 1</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <postalCode>57</postalCode>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>mtorres@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+    <role>processor</role>
+    </associatedParty>
+<pubDate>
+      	2016-06-20
+</pubDate>
+<language>spa</language>
+<abstract>
+  <para>I2D-BIO_2013_IPT009. 
+
+Especímenes de Hemiptera depositados en la colección entomológica del Instituto Alexander von Humboldt.</para>
+</abstract>
+      <keywordSet>
+            <keyword>Hemiptera</keyword>
+            <keyword>Cicadellidae</keyword>
+            <keyword>Colombia</keyword>
+            <keyword>Instituto Humboldt</keyword>
+            <keyword>insectos</keyword>
+        <keywordThesaurus>n/a</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Specimen</keyword>
+        <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>Restringido temporalmente</para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://i2d.humboldt.org.co/ceiba/resource.do?r=hemiptera_coleccion_iavh</url>
+    </online>
+  </distribution>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Hemiptera del neotrópico</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-88.85</westBoundingCoordinate>
+          <eastBoundingCoordinate>-63.6</eastBoundingCoordinate>
+          <northBoundingCoordinate>17.15</northBoundingCoordinate>
+          <southBoundingCoordinate>-18.1</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>1905-06-22</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2007-10-25</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+          <taxonomicCoverage>
+              <generalTaxonomicCoverage>Ejemplares de Hemiptera identificados a familia, género o especie.  La clasificación taxonómica hasta el nivel de especie sigue Catalogue of Life (http://www.catalogueoflife.org)</generalTaxonomicCoverage>
+              <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cicadellidae</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                  <taxonRankName>order</taxonRankName>
+                <taxonRankValue>Hemiptera</taxonRankValue>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <contact>
+    <individualName>
+        <givenName>Claudia-Alejandra</givenName>
+      <surName>Medina-Uribe</surName>
+    </individualName>
+    <organizationName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</organizationName>
+    <positionName>Coordinadora Científica Colecciones Biológicas</positionName>
+    <address>
+        <deliveryPoint>Claustro de San Agustín</deliveryPoint>
+        <city>Villa de Leyva</city>
+        <administrativeArea>Boyacá</administrativeArea>
+        <country>CO</country>
+    </address>
+    <phone>+57 8 7320791</phone>
+    <electronicMailAddress>camedina@humboldt.org.co</electronicMailAddress>
+    <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+  </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>1. Curaduria taxonómica para montar e identificar a los ejemplares. 
+2. Revisión de determinaciones de los ejemplares ya existentes en la colección.
+3. Sistematización en Specify, incluyendo la creación de árboles taxonómicos y geográficos, para controlar la información que se está sistematizando.</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>Principal enfoque son Áreas protegidas de Colombia, pero incluye otros sitios de colecta no incluidos en áreas protegidas</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Los ejemplares fueron colectados mediante trampas malaise, pitfall y sacos winkler. 
+Los taxones escogidos fueron separados al nivel de familia o superfamilia por personas familiarizadas con estos grupos y posteriormente estos taxones separados fueron enviados a especialistas nacionales o internacionales con quienes se estableció previamente un acuerdo de préstamo de acuerdo con las normas mínimas de préstamo establecidas por el Instituto Humboldt y por las leyes nacionales.</para>
+        </samplingDescription>
+      </sampling>
+  </methods>
+  <project>
+      <title>Hemiptera de la colección del Instituto Humboldt</title>
+    <personnel>
+      <individualName>
+          <givenName>Claudia</givenName>
+        <surName>Múnera</surName>
+      </individualName>
+      <role>metadataProvider</role>
+    </personnel>
+    <funding>
+      <para>Alianza entre el Instituto Humboldt, la Unidad Administrativa Especial del Sistema de Parques Nacionales Naturales de Colombia UAESSPNN, la Universidad de Kentucky UK y el Museo de Historia Natural de Los Angeles LACM, con el apoyo de National Science Foundation (NSF)</para>
+    </funding>
+    <studyAreaDescription>
+      <descriptor name="generic"
+                  citableClassificationSystem="false">
+        <descriptorValue>Ejemplares de Hemiptera depositados en la colección del Instituto Humboldt colectados en Colombia.</descriptorValue>
+      </descriptor>
+    </studyAreaDescription>
+    <designDescription>
+      <description>
+          <para>Los ejemplares colectados como parte del  proyecto Diversidad de Insectos de Colombia tienen cubrimiento de áreas protegidas que representan la heterogeneidad del paisaje de Colombia.</para>
+      </description>
+    </designDescription>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2012-09-19T11:04:22.893-05:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation identifier="http://ipt.humboldt.org.co/resource.do?r=hemiptera_coleccion_iavh">Instituto de Investigación de Recursos Biológicos Alexander von Humboldt. (2013). Cicadelidos (Hemiptera: Cicadellidae) de Colección Entomológica del Instituto Alexander von Humboldt. 17369 registros, aportados por: Medina-Uribe, C. (Contacto del recurso), Borja-Acosta, K. (Creador del recurso, Proveedor de los metadatos). Versión 8.0. http://i2d.humboldt.org.co/ceiba/resource.do?r=hemiptera_coleccion_iavh. </citation>
+            <physical>
+              <objectName>Cicadelidos (Hemiptera: Cicadellidae) de Colección Entomológica del Instituto Alexander von Humboldt</objectName>
+              <characterEncoding>UTF-8</characterEncoding>
+              <dataFormat>
+                <externallyDefinedFormat>
+                  <formatName>txt</formatName>
+                </externallyDefinedFormat>
+              </dataFormat>
+              <distribution>
+                <online>
+                  <url function="download">http://doi.org/10.15472/9uy1eh</url>
+                </online>
+              </distribution>
+            </physical>
+          <collection>
+            <parentCollectionIdentifier>IAvH</parentCollectionIdentifier>
+            <collectionIdentifier>IAvH-E</collectionIdentifier>
+            <collectionName>Instituto de Investigación de Recursos Biológicos Alexander von Humboldt</collectionName>
+          </collection>
+          <specimenPreservationMethod>pinned</specimenPreservationMethod>
+          <dc:replaces>http://i2d.humboldt.org.co/ceiba/resource.do?id=hemiptera_coleccion_iavh/v7.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
