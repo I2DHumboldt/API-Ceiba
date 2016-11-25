@@ -1,35 +1,35 @@
 /**
  * Created by acastillo on 11/25/16.
  */
-var request = require('superagent');
-const _config = require('./config/config-convict');
+const request = require('superagent');
+const should = require('should');
 
 describe('Count by read group', function () {
-    it.only('super should return the total of occurrences', function () {
+    it('super should return the total of occurrences', function (done) {
         request
-            .get('http://localhost:5000/api/v1.5/occurrence/count')
-            .query({ isGeoreferenced: 'true', group: 'super' }) // query string
+            .get('http://localhost:9200/sibdataportal/_count?q=resource.group:super')
             .end(function(err, res){
-               console.log(err);
-                console.log(res);
+                should.equal(err, null);
+                res.body.count.should.eql(18779);
+                done();
             });
     });
-    it('humboldt should not count the restricted occurrences', function () {
+    it('humboldt should not count the restricted occurrences', function (done) {
         request
-            .get('http://localhost:5000/api/v1.5/occurrence/count')
-            .query({ isGeoreferenced: 'true', group: 'humboldt' }) // query string
+            .get('http://localhost:9200/sibdataportal/_count?q=resource.group:humboldt')
             .end(function(err, res){
-                console.log(err);
-                console.log(res);
+                should.equal(err, null);
+                res.body.count.should.eql(1410);
+                done();
             });
     });
-    it('guess should return only the public occurrences', function () {
+    it('guess should return only the public occurrences', function (done) {
         request
-            .get('http://localhost:5000/api/v1.5/occurrence/count')
-            .query({ isGeoreferenced: 'true', group: 'guess' }) // query string
+            .get('http://localhost:9200/sibdataportal/_count?q=resource.group:guess')
             .end(function(err, res){
-                console.log(err);
-                console.log(res);
+                should.equal(err, null);
+                res.body.count.should.eql(334);
+                done();
             });
     });
 });

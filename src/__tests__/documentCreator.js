@@ -1,14 +1,24 @@
 /**
  * Created by acastillo on 11/15/16.
  */
-const _config = require('../config/config-convict');
 const documentCreator = require('../documentCreator');
+const folder1 = __dirname+'/../../data-test/resource/dwca-sanpedro_flora_2014';
+const folder2 = __dirname+'/../../data-test/resource/dwca-mateguadua_magnoliophyta_2014';
+const folder3 = __dirname+'/../../data-test/resource/dwca-hemiptera_coleccion_iavh';
 
-const folder = __dirname+'/../../data-test/resource/dwca-sanpedro_flora_2014'
+
 describe('Create document', function () {
-    it('should not return errors', function () {
-        let nDocs = documentCreator(folder, 1);
-        nDocs.should.eql(0);
+    it('dwca-sanpedro_flora_2014 should not return errors', function () {
+        var nDocs = documentCreator(folder1, 1);
+        nDocs.should.eql(334);
     });
+    /*it('dwca-mateguadua_magnoliophyta_2014 should not return errors', function () {
+        var nDocs = documentCreator(folder2, 2);
+        nDocs.should.eql(1410);
+    });
+    it('dwca-hemiptera_coleccion_iavh should not return errors', function () {
+        var nDocs = documentCreator(folder3, 3);
+        nDocs.should.eql(18779);
+    });*/
 });
 

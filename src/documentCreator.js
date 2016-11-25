@@ -35,9 +35,9 @@ function create(folderToProcess, resourceID){
         delete occResource.collection;
         let occurrence = dwac['occurrence'];
         let resource = filterResource(dwac['resource']);
-
-        occResource.id = resourceID;
-        resource.id = resourceID;
+        let rsID = resourceID;
+        occResource.id = rsID;
+        resource.id = rsID;
 
 
         //Add the missing fields and transform fields
@@ -65,7 +65,7 @@ function create(folderToProcess, resourceID){
             index: _config.get('database.elasticSearch.index'),
             type: 'resource',
             method: 'post',
-            id: sourcefileid,
+            id: rsID,
             body: resource
         }, function (error, response) {
             //@TODO Sent to logger
@@ -74,17 +74,14 @@ function create(folderToProcess, resourceID){
             }
             else {
                 logger.log("info", response);
+                console.log("info", response);
             }
         });
 
-
         //Save the occurrences
-        let occurrenceKey = 0;
-        var documentCount = 0;
-        occurrence.forEach(function(doc) {
-            documentCount++;
-            let documentCountLet = documentCount;
-            if(doc){
+        /*for (let index = 0; index < occurrence.length; index++) {
+            let doc = occurrence[index];
+            if (doc) {
                 doc = filterOccurrence(doc);
                 doc['sourcefileid'] = sourcefileid;
                 doc['provider'] = publisher;
@@ -93,19 +90,19 @@ function create(folderToProcess, resourceID){
                 clientElastic.create({
                     index: _config.get('database.elasticSearch.index'),
                     type: 'occurrence',
-                    id: sourcefileid + '_' + occurrenceKey++,
+                    id: resourceID + '_' + index,
                     body: doc
                 }, function (error, response) {
                     //@TODO Sent to logger
                     if(error) {
-                        logger.log("error", 'Error saving occurrence '+documentCountLet, error);
+                        logger.log("error", 'Error saving occurrence '+ index, resourceID + " " + index, error);
                     }
                     else{
-                        logger.log("info", sourcefileid+" "+sourcefileid+" "+documentCountLet);
+                        logger.log("info", resourceID + " " + index);
                     }
                 });
             }
-        });
+        }*/
 
         return occurrence.length;
     }
