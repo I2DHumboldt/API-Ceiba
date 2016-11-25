@@ -107,6 +107,8 @@ npm install elasticdump -g
 
 #### Copiar un índice  la base de datos de desarrollo a la de producción con analyzer y mapping:
 
+Usando elasticdump:
+
 ``` bash
 elasticdump \
   --input=http://staging.es.com:9200/sibdataportal \
@@ -122,6 +124,25 @@ elasticdump \
   --input=http://staging.es.com:9200/sibdataportal \
   --output=http://production.es.com:9200/sibdataportalv2 \
   --type=data
+```
+
+A partir de la version 2.3 se puede usar la función de reindex de ElasticSearch:
+
+```
+POST _reindex
+{
+  "source": {
+    "remote": {
+      "host": "http://otherhost:9200",
+      "username": "user",
+      "password": "pass"
+    },
+    "index": "sibdataportal",
+  },
+  "dest": {
+    "index": "sibdataportalv2"
+  }
+}
 ```
 
 y después se hace apuntar el alias sibdataportal a la base de datos sibdataportalv2. Después se puede borrar la versión anterior sibdataportal1. Ej:
