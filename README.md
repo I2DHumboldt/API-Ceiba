@@ -126,7 +126,7 @@ elasticdump \
   --type=data
 ```
 
-A partir de la version 2.3 se puede usar la función de reindex de ElasticSearch:
+A partir de la version 2.3 se puede usar la función de [_reindex](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html) de ElasticSearch:
 
 ```
 POST _reindex
