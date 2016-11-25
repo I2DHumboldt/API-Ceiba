@@ -12,6 +12,7 @@ ElasticSearch | 5 | (https://www.elastic.co/products/elasticsearch)
 Kibana (Optional) | 5 | (https://www.elastic.co/products/kibana)
 NodeJS | 4 o superior | (https://nodejs.org/en/download/)
 NPM | 3.10.6 o superior | (https://docs.npmjs.com/getting-started/installing-node)
+elasticdump |^2.4.2 | npm install elasticdump -g
 
 * Después de instalar Java se deben exportar las el JAVA_HOME. Ejemplo:
 
