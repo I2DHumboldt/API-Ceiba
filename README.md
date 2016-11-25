@@ -54,9 +54,9 @@ sibdataportal, desde la carpeta de datos de prueba [data-test/resource/](data-te
 }
 ```
 
-**Nota**: _Esta configuración eso para pruebas!!!_
+**Nota**: _Esta configuración es para pruebas!!!_
 Los parámetros definidos aquí para la base de datos de ElasticSearch, deben ser los mismos que los definidos en el script que prepara la base de datos. 
-Par esto, si se quiere modificar la configuración de la aplicación, la forma correcta es exportar las variables de entorno **ESDBHOST** y  **ESINDEX** que espera el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) 
+Si se quiere modificar la configuración de la aplicación, la forma correcta es exportar las variables de entorno **ESDBHOST** y  **ESINDEX** que espera el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) 
 Si las variables de entorno no se definen antes de ejecutar el script, se exportarán las variables con los valores por defecto:
 
 ```
