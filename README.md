@@ -12,6 +12,7 @@ ElasticSearch | 5 | (https://www.elastic.co/products/elasticsearch)
 Kibana (Optional) | 5 | (https://www.elastic.co/products/kibana)
 NodeJS | 4 o superior | (https://nodejs.org/en/download/)
 NPM | 3.10.6 o superior | (https://docs.npmjs.com/getting-started/installing-node)
+elasticdump |^2.4.2 | [npm install elasticdump -g](https://www.npmjs.com/package/elasticdump)
 
 * Después de instalar Java se deben exportar las el JAVA_HOME. Ejemplo:
 
@@ -53,9 +54,9 @@ sibdataportal, desde la carpeta de datos de prueba [data-test/resource/](data-te
 }
 ```
 
-**Nota**: _Esta configuración eso para pruebas!!!_
+**Nota**: _Esta configuración es para pruebas!!!_
 Los parámetros definidos aquí para la base de datos de ElasticSearch, deben ser los mismos que los definidos en el script que prepara la base de datos. 
-Par esto, si se quiere modificar la configuración de la aplicación, la forma correcta es exportar las variables de entorno **ESDBHOST** y  **ESINDEX** que espera el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) 
+Si se quiere modificar la configuración de la aplicación, la forma correcta es exportar las variables de entorno **ESDBHOST** y  **ESINDEX** que espera el archivo [dbscripts/reset_database.sh] (https://github.com/I2DHumboldt/api-data-importer/blob/master/dbscripts/reset_database.sh) 
 Si las variables de entorno no se definen antes de ejecutar el script, se exportarán las variables con los valores por defecto:
 
 ```
@@ -67,7 +68,7 @@ export ESINDEX=sibdataportal
 ### logger con Wiston
 
 Adicionalmente en este archivo de configuración se definen los parámetros para los mensajes (log) del proceso. 
-Hay 2 tipos de tipo de ejecución, que se pueden definir para el logger del proceso, cambiando el valor de la variable 
+Hay 2 tipos de ejecución, que se pueden definir para el logger del proceso, cambiando el valor de la variable 
 log.env: 'production', que almacena todos los mensajes del logger en el archivo especificado por `filename` (por defecto 
 en `./logs/ceiba-data-importer.log`) o 'development', que lanza todos los mensajes de error sobre la consola del sistema. 
 El tipo de ejecución por defecto es 'production'. 
@@ -76,7 +77,7 @@ El tipo de ejecución por defecto es 'production'.
 
 ### Preparar la base de datos de ElasticSearch para la importación
 
-Esta script limpia la base de datos de elasticSearch donde se almacenarán los datos de la importación y crear los mapping respectivos de `occurrence` y `resource`. Para mayores detalles consulte consulte la documentación de [dbscripts](dbscripts)
+Este script limpia la base de datos de elasticSearch donde se almacenarán los datos de la importación y crea los mapping respectivos de `occurrence` y `resource`. Para mayores detalles consulte la documentación de [dbscripts](dbscripts)
 
 ``` bash
 nmp run prepare
@@ -107,12 +108,7 @@ npm install elasticdump -g
 
 #### Copiar un índice de la base de datos de desarrollo a la de producción con analyzer y mapping:
 
-Usando elasticdump. 
-
-Cada vez se debe copiar la base de datos de prueba sobre un índice diferente al último. Es decir, si la vez 
-anterior se importó sobre **sibdataportalv1**, esta vez deberá importar los datos sobre **sibdataportalv2**,
-de esta forma evita que el sistema tenga periodos de tiempo muertos.
-
+Cada vez se debe copiar la base de datos de prueba sobre un índice diferente al último. Es decir, si la vez anterior se importó sobre **sibdataportalv1**, esta vez deberán importar los datos sobre **sibdataportalv2**, de esta forma evita que el sistema tenga periodos de tiempo muertos.
 
 ``` bash
 elasticdump \
@@ -131,19 +127,16 @@ elasticdump \
   --type=data
 ```
 
-Para facilitar la labor de migración se ha implementado en [dbscripts/elasticdump.sh](dbscripts/elasticdump.sh) un
-script para realizar la migración de forma asistida. 
-Para realizar la migración de su base de datos local que está en _http://localhost:9200/sibdataportal_ sobre la base de 
-datos de producción localizada en __http://192.168.0.77:9200/sibdataportal2__ debe ejecutar la siguiente línea de comandos
+Para facilitar la labor de migración, se ha implementado en [dbscripts/elasticdump.sh](dbscripts/elasticdump.sh) un script para realizar la migración de forma asistida. 
+Para realizar la migración de su base de datos local que está en _http://localhost:9200/sibdataportal_ sobre la base de  datos de producción localizada en __http://192.168.0.77:9200/sibdataportal2__ debe ejecutar la siguiente línea de comandos
  
 
 ``` bash
 ./dbscripts/elasticdump.sh http://localhost:9200/sibdataportal http://192.168.0.77:9200/sibdataportal2
 ```
-Lea las instrucciones de la carpeta [dbscripts/elasticdump.sh](dbscripts/elasticdump.sh) si necesita más información.
+Lea las instrucciones de la carpeta [dbscripts](dbscripts) si necesita más información.
 
-Una vez migrado el índice a las base de datos de producción, es necesario hacer apuntar el alias **sibdataportal** 
-a la recién creada sibdataportalv2. Después se puede borrar la versión anterior sibdataportal1. Ej:
+Una vez migrado el índice a las base de datos de producción, es necesario hacer apuntar el alias **sibdataportal**  a la recién creada sibdataportalv2. Después se puede borrar la versión anterior sibdataportal1. Ej:
 
 ```
 	POST /_aliases
@@ -155,7 +148,7 @@ a la recién creada sibdataportalv2. Después se puede borrar la versión anteri
 	}
 ```
 
-!!!Estos pasos son críticos y no se deben automatizar. Deben estar supervisados por una persona !!!
+**!!!Estos pasos son críticos y no se deben automatizar. Deben estar supervisados por una persona !!!**
 
 # Anexos
 
