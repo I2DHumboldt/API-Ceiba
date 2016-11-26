@@ -11,8 +11,8 @@
     "import" : "node src/index.js",
     "eslint": "eslint src --cache",
     "eslint-fix": "npm run eslint -- --fix",
-    "mocha-count": "mocha --compilers js:babel-register --require should --reporter mocha-better-spec-reporter __tests__/**/*.js",
-    "mocha-creation": "mocha --compilers js:babel-register --require should --reporter mocha-better-spec-reporter src/__tests__/**/*.js",
+    "test-count": "mocha --compilers js:babel-register --require should --reporter mocha-better-spec-reporter __tests__/**/*.js",
+    "test-creation": "mocha --compilers js:babel-register --require should --reporter mocha-better-spec-reporter src/__tests__/importations.js",
     "test-cov": "istanbul cover _mocha -- --compilers js:babel-register --require should --reporter dot --recursive src/**/__tests__/**/*.js",
     "test-travis": "istanbul cover _mocha --report lcovonly -- --compilers js:babel-register --require should --reporter mocha-better-spec-reporter --recursive src/**/__tests__/**/*.js && npm run eslint"
   },

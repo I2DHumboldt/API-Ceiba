@@ -5,7 +5,7 @@
  * @returns the number of files exported to the database
  * Created by acastillo on 11/13/16.
  */
-const dwacParser = require('./dwacParser');
+const dwacParser = require('./DwacParser');
 const elasticsearch = require('elasticsearch');
 const occurrenceMapper = require('./../config/mappers/occurrenceMapper.json');
 const emlMapper = require('./../config/mappers/emlMapper.json');
@@ -16,16 +16,16 @@ const filterResource = require('./filters/resource');
 const publisher = require('./../config/info/publisher.json');
 const logger = require('./log');
 const _config = require('../config/config-convict');
+const Promise = require('promise');
 
-
-function create(folderToProcess, resourceID){
+function create(parameters, callback){
     try{
-        const clientElastic = new elasticsearch.Client({
+        let clientElastic = new elasticsearch.Client({
             host: _config.get('database.elasticSearch.url'),
             requestTimeout : Infinity
         });
 
-        let dwac = dwacParser.loadFromFolder(folderToProcess, {
+        let dwac = dwacParser.loadFromFolder(parameters.path, {
             'occurrence.txt':[{'key':'occurrence', 'mapper': occurrenceMapper}],
             'eml.xml':[{'key':'occResource', 'mapper': emlMapper},
                 {'key':'resource', 'mapper':resourceMapper}]}
@@ -35,13 +35,13 @@ function create(folderToProcess, resourceID){
         delete occResource.collection;
         let occurrence = dwac['occurrence'];
         let resource = filterResource(dwac['resource']);
-        let rsID = resourceID;
+        let rsID = parameters.resourceID;
         occResource.id = rsID;
         resource.id = rsID;
 
 
         //Add the missing fields and transform fields
-        var sourcefileid = '';
+        let sourcefileid = '';
         let rgpId = occResource['gbif_package_id'];
         if(rgpId) {
             let lastIndexOf = rgpId.lastIndexOf('/');
@@ -50,36 +50,22 @@ function create(folderToProcess, resourceID){
             }
         }
         else{
-            logger.log("error", 'Could not determine the sourcefileid for '+folderToProcess);
+            logger.log('error', 'Could not determine the sourcefileid for '+ parameters.path);
             return;
         }
 
-        /*for(var k = 15481; k < 15482; k ++) {
-            //if(!filterOccurrence(occurrence[k]).eventdate_start)
-                console.log(k,filterOccurrence(occurrence[k]));
-
-            //console.log(filterOccurrence(occurrence[k].eventdate_start), filterOccurrence(occurrence[k].eventdate_end));
-        }*/
         //Save the resource information
-        clientElastic.create({
+        let promises = [];
+        promises.push(clientElastic.create({
             index: _config.get('database.elasticSearch.index'),
             type: 'resource',
             method: 'post',
             id: rsID,
             body: resource
-        }, function (error, response) {
-            //@TODO Sent to logger
-            if(error) {
-                logger.log("error", 'Error saving resource', error);
-            }
-            else {
-                logger.log("info", response);
-                console.log("info", response);
-            }
-        });
+        }));
 
         //Save the occurrences
-        /*for (let index = 0; index < occurrence.length; index++) {
+        for (let index = 0; index < occurrence.length; index++) {
             let doc = occurrence[index];
             if (doc) {
                 doc = filterOccurrence(doc);
@@ -87,30 +73,26 @@ function create(folderToProcess, resourceID){
                 doc['provider'] = publisher;
                 doc['resource'] = occResource;
                 Object.assign(doc.collection, collection);
-                clientElastic.create({
+                promises.push(clientElastic.create({
                     index: _config.get('database.elasticSearch.index'),
                     type: 'occurrence',
-                    id: resourceID + '_' + index,
+                    id: rsID + '_' + index,
                     body: doc
-                }, function (error, response) {
-                    //@TODO Sent to logger
-                    if(error) {
-                        logger.log("error", 'Error saving occurrence '+ index, resourceID + " " + index, error);
-                    }
-                    else{
-                        logger.log("info", resourceID + " " + index);
-                    }
-                });
+                }));
             }
-        }*/
+        }
+
+        Promise.all(promises).then(values =>{
+            callback(null, values);
+        }, reason => {
+            callback(reason, null);
+        });
 
         return occurrence.length;
     }
     catch(generalError){
-        logger.log("error", 'Error processing directory '+folderToProcess,"Step: "+documentCount, generalError);
+        logger.log('error', 'Error processing directory ' + parameters.path, generalError);
     }
-
-    return 0;
 }
 
 module.exports = create;

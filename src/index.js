@@ -21,7 +21,14 @@ const logger = require('./log');
         //For each folder in the resources folder proceed to importation
         if(fs.lstatSync(resourcesFolder+f).isDirectory()) {
             logger.info("Importing from: "+resourcesFolder+f+"/");
-            let nDocs = documentCreator(resourcesFolder+f+"/", index++);
+            let nDocs = documentCreator({path: resourcesFolder+f+"/", resourceID: index++}, function(err, resp){
+                if(err) {
+                    logger.log("error", "Error processing " +resourcesFolder+f+"/", err);
+                }
+                if(resp) {
+                    logger.info("Dwac processed correctly "+ resourcesFolder+f+"/");
+                }
+            });
             logger.info("occurrences imported: "+nDocs);
         }
     });

@@ -20,7 +20,6 @@ function occurrenceConverter(filename, mapper) {
     if(lines[lines.length-1].length === 0){
         lines.splice(lines.length-1, 1);
     }
-
     let column2Alias = {};
     //Convert column names to column indexes and alias
     head.forEach(function(value, index) {
