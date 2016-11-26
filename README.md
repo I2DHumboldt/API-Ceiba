@@ -192,3 +192,19 @@ Se debe ver una salida como esta:
   "active_shards_percent_as_number" : 50.0
  }
  ```
+
+# Testing para desarrolladores
+
+Se han definido 2 Unit Tests con Mocha para probar que el data-importer funciona correctamente. El primer Unit Test es para probar que la importación
+funciona correctamente:
+
+```
+npm run test-creation
+```
+
+El segundo Unit Test sirve para probar que los conteos de los registros por grupos de acceso es correcto. Para eso ejecute:
+
+```
+npm run test-count
+```
+
