@@ -5,7 +5,7 @@
  * @returns the number of files exported to the database
  * Created by acastillo on 11/13/16.
  */
-const dwacParser = require('./DwacParser');
+const dwacParser = require('./dwacParser');
 const elasticsearch = require('elasticsearch');
 const occurrenceMapper = require('./../config/mappers/occurrenceMapper.json');
 const emlMapper = require('./../config/mappers/emlMapper.json');
