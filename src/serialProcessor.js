@@ -29,7 +29,7 @@ function processResource(list) {
     if(list && list.length >=1 ) {
         var resource = list.splice(0,1)[0];
         logger.info('Importing from: ' + resource.path);
-        let nDocs = documentCreator(resource, function(err, resp){
+        documentCreator(resource, function(err, resp){
             if(err) {
                 logger.log('error', 'Error processing ' + resource.path, err);
             }
@@ -39,7 +39,5 @@ function processResource(list) {
             logger.info('documents imported: '+resp.length);
             processResource(list);
         });
-
     }
 }
-

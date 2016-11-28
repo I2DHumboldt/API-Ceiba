@@ -17,6 +17,7 @@ const publisher = require('./../config/info/publisher.json');
 const logger = require('./log');
 const _config = require('../config/config-convict');
 const Promise = require('promise');
+const randomstring = require("randomstring");
 
 function create(parameters, callback){
     try{
@@ -30,6 +31,11 @@ function create(parameters, callback){
             'eml.xml':[{'key':'occResource', 'mapper': emlMapper},
                 {'key':'resource', 'mapper':resourceMapper}]}
         );
+
+        if(!dwac['occResource'] || !dwac['resource']){
+            callback("Error: Could not load the resource file", null);
+        }
+
         let occResource = filterOccResource(dwac['occResource']);
         let collection = occResource.collection;
         delete occResource.collection;
@@ -50,35 +56,40 @@ function create(parameters, callback){
             }
         }
         else{
-            logger.log('error', 'Could not determine the sourcefileid for '+ parameters.path);
-            return;
+            logger.log('warn', 'Could not determine the sourcefileid for ' + parameters.path + ' ...I\'ll invent one');
+            occResource['gbif_package_id'] = randomstring.generate();;
+            resource['gbif_package_id'] = occResource['gbif_package_id'];
+            rgpId = occResource['gbif_package_id'];
         }
 
         //Save the resource information
         let promises = [];
-        promises.push(clientElastic.create({
-            index: _config.get('database.elasticSearch.index'),
-            type: 'resource',
-            method: 'post',
-            id: rsID,
-            body: resource
-        }));
-
-        //Save the occurrences
-        for (let index = 0; index < occurrence.length; index++) {
-            let doc = occurrence[index];
-            if (doc) {
-                doc = filterOccurrence(doc);
-                doc['sourcefileid'] = sourcefileid;
-                doc['provider'] = publisher;
-                doc['resource'] = occResource;
-                Object.assign(doc.collection, collection);
-                promises.push(clientElastic.create({
-                    index: _config.get('database.elasticSearch.index'),
-                    type: 'occurrence',
-                    id: rsID + '_' + index,
-                    body: doc
-                }));
+        if(resource) {
+            promises.push(clientElastic.create({
+                index: _config.get('database.elasticSearch.index'),
+                type: 'resource',
+                method: 'post',
+                id: rsID,
+                body: resource
+            }));
+            if(occurrence) {
+                //Save the occurrences
+                for (let index = 0; index < occurrence.length; index++) {
+                    let doc = occurrence[index];
+                    if (doc) {
+                        doc = filterOccurrence(doc);
+                        doc['sourcefileid'] = sourcefileid;
+                        doc['provider'] = publisher;
+                        doc['resource'] = occResource;
+                        Object.assign(doc.collection, collection);
+                        promises.push(clientElastic.create({
+                            index: _config.get('database.elasticSearch.index'),
+                            type: 'occurrence',
+                            id: rsID + '_' + index,
+                            body: doc
+                        }));
+                    }
+                }
             }
         }
 
@@ -88,7 +99,10 @@ function create(parameters, callback){
             callback(reason, null);
         });
 
-        return occurrence.length;
+        if(occurrence && occurrence.length)
+            return occurrence.length;
+        else
+            return 0;
     }
     catch(generalError){
         logger.log('error', 'Error processing directory ' + parameters.path, generalError);

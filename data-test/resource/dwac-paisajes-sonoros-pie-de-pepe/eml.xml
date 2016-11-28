@@ -1,0 +1,199 @@
+<ns0:eml xmlns:ns0="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="http://i2d.humboldt.org.co/ceiba/resource.do?id=paisajes_sonoros_bahia_malaga/v1" scope="system" system="http://gbif.org" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="spa">
+
+    <dataset>
+        <title xml:lang="spa">Paisajes sonoros de bosques de tierras bajas del Choco Biogeogr&#225;fico (Bah&#237;a M&#225;laga), Proyecto Bioredd. 2014-2015</title>
+        <creator>
+            <individualName>
+                <givenName>Paula Catalina</givenName>
+                <surName>Caycedo Rosales</surName>
+            </individualName>
+            <organizationName>Instituto de Investigaci&#243;n de Recursos Biol&#243;gicos Alexander von Humboldt</organizationName>
+            <positionName>Investigador Adjunto 1</positionName>
+            <address>
+                <deliveryPoint>Calle 28A # 15-09</deliveryPoint>
+                <city>Bogot&#225;, D.C.</city>
+                <administrativeArea>Bogot&#225;, D.C.</administrativeArea>
+                <postalCode>0000</postalCode>
+                <country>CO</country>
+            </address>
+            <phone>3202767</phone>
+            <electronicMailAddress>pcaicedo@humboldt.org.co</electronicMailAddress>
+            <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Paula Catalina</givenName>
+                <surName>Caycedo Rosales</surName>
+            </individualName>
+            <organizationName>Instituto de Investigaci&#243;n de Recursos Biol&#243;gicos Alexander von Humboldt</organizationName>
+            <positionName>Investigador Adjunto 1</positionName>
+            <address>
+                <deliveryPoint>Calle 28A # 15-09</deliveryPoint>
+                <city>Bogot&#225;, D.C</city>
+                <administrativeArea>Bogot&#225;, D.C.</administrativeArea>
+                <postalCode>0000</postalCode>
+                <country>CO</country>
+            </address>
+            <phone>3202767</phone>
+            <electronicMailAddress>pcaicedo@humboldt.org.co</electronicMailAddress>
+            <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Paula Catalina</givenName>
+                <surName>Caycedo Rosales</surName>
+            </individualName>
+            <organizationName>Instituto Humboldt</organizationName>
+            <positionName>Investigador Adjunto 1</positionName>
+            <address>
+                <deliveryPoint>Calle 28A # 15-09</deliveryPoint>
+                <city>Bogota</city>
+                <administrativeArea>Bogota D.C</administrativeArea>
+                <postalCode>0000</postalCode>
+                <country>CO</country>
+            </address>
+            <phone>3202767</phone>
+            <electronicMailAddress>pcaicedo@humboldt.org.co</electronicMailAddress>
+            <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+            <role>user</role>
+        </associatedParty>
+        <pubDate>
+            2015-12-23
+        </pubDate>
+        <language>spa</language>
+        <abstract>
+            <para>Bajo el convenio 14-075 Monitoreo de la Biodiversidad en las Parcelas Permanentes de los Proyectos REDD+ establecidas en el marco del Programa BIOREDD+ entre la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID) y el Instituto de Investigaci&#243;n de Recursos Biol&#243;gicos Alexander von Humboldt se llev&#243; a cabo la caracterizaci&#243;n y levantamiento de la l&#237;nea base de monitoreo paisajes sonoros, tanto en las parcelas permanentes de 1 ha establecida por el CONIF, cuya ubicaci&#243;n corresponde al bosque h&#250;medo tropical del municipio de Buenaventura, vereda La Plata, corregimiento Ecomanglar (departamento del Valle del Cauca), como en otros 9 puntos de muestreo, en bosques de Tierra firme, Manglares y Naidizales. En total se recolectaron 23747 registros bioacusticos de las 24 horas, desde junio hasta agosto de 2014. Cada punto de muestreo representa a un conjunto de datos, cada grabaci&#243;n tiene valores de 6 &#237;ndices de diversidad ac&#250;stica. Matrices de estos &#237;ndices acompa&#241;an a cada conjunto de datos:  &#205;ndice de Complejidad Ac&#250;stica-ACI-, &#205;ndice de Diversidad Ac&#250;stica-ADI-, &#205;ndice de Entrop&#237;a Ac&#250;stica-H-, &#205;ndice Bioac&#250;stico-BI-, &#205;ndice de la diferencia normalizada del paisaje sonoro-NSDI-,  &#205;ndice de Equitatividad Ac&#250;stica-AE- y matriz de densidad de espectros de poder &#8211;PSD-</para>
+        </abstract>
+        <keywordSet>
+            <keyword>Paisajes Sonoros</keyword>
+            <keyword>Ecoac&#250;stica</keyword>
+            <keyword>Bahia Malaga</keyword>
+            <keyword>Monitoreo Ac&#250;stico Pasivo</keyword>
+            <keyword>Indices de diversidad ac&#250;stica</keyword>
+            <keyword>Densidad de Espectros de Poder.</keyword>
+            <keywordThesaurus>N/A</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Other</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>Libre a nivel interno</para>
+        </intellectualRights>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>Bosque h&#250;medo tropical del municipio de Buenaventura, Vereda La Plata, Corregimiento Ecomanglar, Departamento del Valle del Cauca. </geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>-77.16</westBoundingCoordinate>
+                    <eastBoundingCoordinate>-77.11</eastBoundingCoordinate>
+                    <northBoundingCoordinate>3.7</northBoundingCoordinate>
+                    <southBoundingCoordinate>3.64</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>2014-07-07</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>2015-08-11</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+        </coverage>
+        <contact>
+            <individualName>
+                <givenName>Paula Catalina</givenName>
+                <surName>Caycedo Rosales</surName>
+            </individualName>
+            <organizationName>Instituto de Investigaci&#243;n de Recursos Biol&#243;gicos Alexander von Humboldt</organizationName>
+            <positionName>Investigador Adjunto 1</positionName>
+            <address>
+                <deliveryPoint>Calle 28A # 15-09</deliveryPoint>
+                <city>Bogota, D.C.</city>
+                <administrativeArea>Bogota, D.C.</administrativeArea>
+                <postalCode>0000</postalCode>
+                <country>CO</country>
+            </address>
+            <phone>3202767</phone>
+            <electronicMailAddress>pcaicedo@humboldt.org.co</electronicMailAddress>
+            <onlineUrl>http://www.humboldt.org.co</onlineUrl>
+        </contact>
+        <methods>
+            <methodStep>
+                <description>
+                    <para>Previo a campo:
+                        Instalar el programa de grabacion (Songmeter Configuration Ultility 3.2.4 )
+                        Settings:  tasa de muestreo de 44100 Hz a 16 bits, esto permite que su grabaci&#243;n tenga un rango espectral de 20 Hz a 22 kHz.
+                        Se utilizaron dos tipos de programaciones: durante 5 d&#237;as se tomaron 5 minutos cada 10 minutos. Durante el resto del mes se tomo datos de 20 minutos cada 30 minutos de 6:00 am a 9:30 am, con el fin de tener mayor informaci&#243;n sobre el coro del amanecer. El resto del d&#237;a se tomo 3 minutos cada 30 minutos.
+                        No se usaron filtros
+                        No se usaron preamplificadores
+                        Cada punto de grabaci&#243;n puede grabar en est&#233;reo o en mono.
+
+                        En campo
+
+                        Anotamos el n&#250;mero de serial de la unidad de grabaci&#243;n con la informaci&#243;n de georreferenciaci&#243;n.
+                        Las grabadoras fueron instaladas a una altura de 2 m desde el suelo en tres tipos de coberturas de vegetaci&#243;n.
+                        Las grabadoras se recogieron al mes de la toma de datos.
+                        Los datos son analizados en un computador de 12 n&#250;cleos y se calcularon 9 tipos de indices ac&#250;sticos.
+
+                    </para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para>Asociado a este conjunto de datos se entregan 3 tablas de datos
+
+                        tb1. Datos asociados al equipo de grabacion y a los archivos de audio
+                        tbl 2. Indices acusticos
+                        tbl. 3 Densidad de espectros de poder (PSD)</para>
+                </description>
+            </methodStep>
+            <sampling>
+                <studyExtent>
+                    <description>
+                        <para>Bosque h&#250;medo tropical del municipio de Buenaventura, Vereda La Plata, Corregimiento Ecomanglar, Departamento del Valle del Cauca. Se recolectaron sonidos en 6 replicas de bosques h&#250;medos de tierra firme, 2  Naidizales y 1 Manglar.</para>
+                    </description>
+                </studyExtent>
+                <samplingDescription>
+                    <para>Las unidades de grabaci&#243;n se instalaron a una altura de 1,5 a 2 metros encima del suelo, sujetadas a un &#225;rbol y fueron ubicadas de tal manera que estuvieran distanciadas por lo menos por 500 m. Previo a la instalaci&#243;n en campo las grabadoras fueron programadas para tomar registros 5 minutos cada 10 minutos, durante el d&#237;a y la noche. Despu&#233;s de una semana de tomar esta programaci&#243;n, se volvi&#243; a programar para tomar un minuto cada 10 minutos, y de 6 a 9:30 am,  grabaron 20 minutos cada 30 minutos para tener mejor la representatividad del pico ac&#250;stico de las aves. Se muestreo a una tasa de 44100Hz y 16 bits. Se especifica para cada punto de muestreo si se grabo en est&#233;reo o en mono. No se usaron filtros de ning&#250;n tipo, ni amplificaciones del sonido. Se utilizaron pilas alcalinas.
+                    </para>
+                </samplingDescription>
+            </sampling>
+        </methods>
+        <project>
+            <title>Caracterizaci&#243;n y monitoreo de la biodiversidad en cuatro ventanas del Choco Biogeografico.  Programa BIOREDD+ de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID).</title>
+            <personnel>
+                <individualName>
+                    <givenName>Paula Catalina</givenName>
+                    <surName>Caycedo Rosales</surName>
+                </individualName>
+                <role>pointOfContact</role>
+            </personnel>
+            <funding>
+                <para>Convenio 14-075 entre el Instituto de Investigaci&#243;n de Recursos Biol&#243;gicos Alexander von Humboldt y BIOREDD+ con el objeto del Monitoreo de la Biodiversidad en las Parcelas Permanentes de los proyectos REDD+ establecidas en el marco del Programa BIOREDD+ de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID).
+                </para>
+            </funding>
+            <studyAreaDescription>
+                <descriptor citableClassificationSystem="false" name="generic">
+                    <descriptorValue>Bosque h&#250;medo tropical del municipio de Buenaventura, vereda La Plata, corregimiento Ecomanglar.  departamento del Valle del Cauca.</descriptorValue>
+                </descriptor>
+            </studyAreaDescription>
+            <designDescription>
+                <description>
+                    <para>Los proyectos REDD+ est&#225;n enfocados en la reducci&#243;n de emisiones derivadas de la deforestaci&#243;n y la degradaci&#243;n forestal e incorporan la conservaci&#243;n, el manejo sostenible y el mejoramiento del stock de Carbono de los bosques en los pa&#237;ses en desarrollo. Sin embargo, los bosques son importantes no s&#243;lo por su capacidad para almacenar Carbono, sino por albergar una alta diversidad de especies y ser los responsables de procesos de los ecosistemas de los cuales depende la humanidad. El objetivo de este trabajo fue incorporar otras dimensiones de la diversidad (taxon&#243;mica, ac&#250;stica, funcional y filogen&#233;tica) en fauna y flora, en un proyecto REDD+ en el Choc&#243; biogeogr&#225;fico colombiano, con el fin de tener una valoraci&#243;n ecol&#243;gica integral de estos bosques. Para alcanzar este objetivo, se establecieron cuatro parcelas permanentes de vegetaci&#243;n de 1 ha, donde se estudi&#243; la diversidad taxon&#243;mica, ac&#250;stica,  funcional y filogen&#233;tica de las especies arb&#243;reas. El muestreo de la fauna se extendi&#243; fuera del &#225;rea de la parcela. La diversidad taxon&#243;mica y ac&#250;stica de las especies de fauna se evalu&#243; mediante las t&#233;cnicas no invasivas de fototrampeo y Monitoreo Ac&#250;stico Pasivo. La diversidad ac&#250;stica fue evaluada a trav&#233;s de la densidad espectral promedio (PSD) e &#237;ndices de diversidad ac&#250;stica.</para>
+                </description>
+            </designDescription>
+        </project>
+    </dataset>
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2015-12-22T03:40:22.676-05:00</dateStamp>
+                <hierarchyLevel>dataset</hierarchyLevel>
+                <citation> Instituto de Investigaci&#243;n de Recursos Biol&#243;gicos Alexander von Humboldt (2014).Paisajes sonoros de Bahia Malaga, municipio de Buenaventura, vereda La Plata, corregimiento Ecomanglar, departamento del  Valle del Cauca. 23747 registros bioacusticos, aportados por: Caycedo Rosales P. (Contacto del recurso, Creador del recurso, Autor), Ayerbe F. ( Autor) </citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+</ns0:eml>
+

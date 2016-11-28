@@ -61,12 +61,15 @@ function emlConverter(filename, mapper) {
     var data = {}
     parser.parseString(content, function (err, result) {
         if(!err)
-            data = result['eml:eml'];
+            data = result['eml:eml']||result['ns0:eml'];
+
     });
+    //console.log(data);
 
     //Get the fields specified in the emlMapper.json
     let result = {};
     emlParse(mapper, data, result);
+    //console.log(result);
 
     return result;
 }
@@ -78,6 +81,8 @@ function emlConverter(filename, mapper) {
  * @param output
  */
 function emlParse(mapper, data, output){
+    if(!data)
+        return;
     if(Array.isArray(data)) {
         data.forEach(function(value) {
             emlParse(mapper, value, output);

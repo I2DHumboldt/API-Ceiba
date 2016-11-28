@@ -60,6 +60,7 @@ Si se quiere modificar la configuración de la aplicación, la forma correcta es
 Si las variables de entorno no se definen antes de ejecutar el script, se exportarán las variables con los valores por defecto:
 
 ```
+export CEIBA_RESOURCES=/usr/ceiba/resources/
 export ESDBHOST=localhost:9200
 export ESINDEX=sibdataportal
 ...
