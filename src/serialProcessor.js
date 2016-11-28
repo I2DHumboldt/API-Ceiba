@@ -35,8 +35,9 @@ function processResource(list) {
             }
             if(resp) {
                 logger.info('Dwac processed correctly ' + resource.path);
+                logger.info('documents imported: '+resp.length);
+
             }
-            logger.info('documents imported: '+resp.length);
             processResource(list);
         });
     }

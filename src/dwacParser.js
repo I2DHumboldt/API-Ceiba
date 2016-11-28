@@ -58,14 +58,14 @@ function occurrenceConverter(filename, mapper) {
 function emlConverter(filename, mapper) {
     let  parser = new xml2js.Parser();
     let content = fs.readFileSync(filename).toString();
-    var data = {}
+    var data = null;
     parser.parseString(content, function (err, result) {
         if(!err)
             data = result['eml:eml']||result['ns0:eml'];
 
     });
-    //console.log(data);
-
+    if(data === null)
+        return null;
     //Get the fields specified in the emlMapper.json
     let result = {};
     emlParse(mapper, data, result);

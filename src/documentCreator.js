@@ -32,8 +32,9 @@ function create(parameters, callback){
                 {'key':'resource', 'mapper':resourceMapper}]}
         );
 
-        if(!dwac['occResource'] || !dwac['resource']){
+        if(!dwac['occResource'] || !dwac['resource']) {
             callback("Error: Could not load the resource file", null);
+            return 0;
         }
 
         let occResource = filterOccResource(dwac['occResource']);
@@ -106,6 +107,8 @@ function create(parameters, callback){
     }
     catch(generalError){
         logger.log('error', 'Error processing directory ' + parameters.path, generalError);
+        callback("Error: General error", null);
+        return 0;
     }
 }
 
