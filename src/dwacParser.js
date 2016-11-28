@@ -7,14 +7,17 @@ const fs = require('fs');
 const xml2js = require('xml2js');
 const set = require('set-value');
 const get = require('get-value');
+const JSZip = require('jszip');
+const Promise = require('promise');
+
 /**
  * This function converts the given occurrence.txt in a JSON.
  * The fields and names are given by the DwacMapper
  * @param filename
  * @param mapper
  */
-function occurrenceConverter(filename, mapper) {
-    let lines = fs.readFileSync(filename).toString().split('\n');
+function occurrenceConverter(text, mapper) {
+    let lines = text.split('\n');//fs.readFileSync(filename).toString().split('\n');
     let head = (lines.splice(0, 1))[0].split("\t");//Get the header
     //Remove the last line if empty. Most of the csv end with a blank line
     if(lines[lines.length-1].length === 0){
@@ -55,9 +58,9 @@ function occurrenceConverter(filename, mapper) {
  * @param filename
  * @param mapper
  */
-function emlConverter(filename, mapper) {
+function emlConverter(content, mapper) {
     let  parser = new xml2js.Parser();
-    let content = fs.readFileSync(filename).toString();
+    //let content = fs.readFileSync(filename).toString();
     var data = null;
     parser.parseString(content, function (err, result) {
         if(!err)
@@ -130,9 +133,9 @@ function emlParse(mapper, data, output){
  * @param filename
  * @param mapper
  */
-function metaConverter(filename, mapper){
+function metaConverter(content, mapper){
     let  parser = new xml2js.Parser();
-    let content = fs.readFileSync(filename).toString();
+    //let content = fs.readFileSync(filename).toString();
     var data = {};
     parser.parseString(content, function (err, result) {
         if(!err)
@@ -157,18 +160,19 @@ function loadFromFolder(dirname, toParse) {
             if(f === name) {
                 let procs = toParse[name];
                 procs.forEach(function(process) {
+
                     switch(f) {
                         case "occurrence.txt":
-                            result[process["key"]] = occurrenceConverter(dirname+f, process["mapper"]);
+                            result[process["key"]] = occurrenceConverter(fs.readFileSync(dirname+f).toString(), process["mapper"]);
                             break;
                         case "eml.xml":
-                            result[process["key"]] = emlConverter(dirname+f, process["mapper"]);
+                            result[process["key"]] = emlConverter(fs.readFileSync(dirname+f).toString(), process["mapper"]);
                             break;
                         case "meta.xml":
-                            result[process["key"]] = metaConverter(dirname+f, process["mapper"]);
+                            result[process["key"]] = metaConverter(fs.readFileSync(dirname+f).toString(), process["mapper"]);
                             break;
                         case "occurrence_extension.txt":
-                            result[process["key"]] = occurrenceConverter(dirname+f, process["mapper"]);
+                            result[process["key"]] = occurrenceConverter(fs.readFileSync(dirname+f).toString(), process["mapper"]);
                             break;
                     }
                 });
@@ -179,7 +183,60 @@ function loadFromFolder(dirname, toParse) {
     return result;
 }
 
-module.exports = {loadFromFolder}
+function loadFromZip(zipFile, toParse) {
+    let zipContent = fs.readFileSync(zipFile);
+    return JSZip.loadAsync(zipContent).then(function (zip) {
+        let result = {};
+        let promises = [];
+        for(let f in zip.files) {
+            for (let name in toParse) {
+                if (f === name) {
+                    let procs = toParse[name];
+                    procs.forEach(function(process) {
+                        switch(f) {
+                            case "occurrence.txt":
+                                promises.push(zip.file(f).async("text").then(text => {
+                                    let tmp = {};
+                                    tmp[process["key"]] = occurrenceConverter(text, process["mapper"]);
+                                    return tmp;
+                                }));
+                                break;
+                            case "eml.xml":
+                                promises.push(zip.file(f).async("text").then(text => {
+                                    let tmp = {};
+                                    tmp[process["key"]] = emlConverter(text, process["mapper"]);
+                                    return tmp;
+                                }));
+                                break;
+                            case "meta.xml":
+                                promises.push(zip.file(f).async("text").then(text => {
+                                    let tmp = {};
+                                    tmp[process["key"]] = metaConverter(text, process["mapper"]);
+                                    return tmp;
+                                }));
+                                break;
+                            case "occurrence_extension.txt":
+                                /*promises.push(zip.file(f).async("text").then(text => {
+                                 let tmp = {};
+                                 tmp[process["key"]] = emlConverter(text, process["mapper"]);
+                                 return tmp;
+                                 }));*/
+                                break;
+                        }
+                    });
+                }
+            }
+        }
+        return Promise.all(promises).then(procs => {
+            procs.forEach(proc => {
+                Object.assign(result, proc);
+            });
+            return result;
+        });
+    });
+}
+
+module.exports = {loadFromFolder, loadFromZip}
 
 
 
