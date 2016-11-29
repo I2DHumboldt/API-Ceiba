@@ -9,41 +9,41 @@ const folder3 = __dirname+'/../../data-test/resource/dwca-hemiptera_coleccion_ia
 describe('Create document', function () {
     it('dwca-sanpedro_flora_2014 should not return errors', function (done) {
         this.timeout(Infinity);
-        var nDocs = documentCreator({path: folder1, resourceID: 1}, function(err, resp) {
+        documentCreator({path: folder1, resourceID: 1}, function(err, resp) {
             if(err) {
                 done("error");
             }
             if(resp) {
+                resp.length.should.eql(335);
                 done();
             }
         });
-        nDocs.should.eql(334);
     });
     it('dwca-mateguadua_magnoliophyta_2014 should not return errors', function (done) {
         this.timeout(Infinity);
-        var nDocs = documentCreator({path: folder2, resourceID: 2}, function(err, resp) {
+        documentCreator({path: folder2, resourceID: 2}, function(err, resp) {
             if(err) {
-                console.log(err);
                 done("error");
             }
             if(resp) {
+                resp.length.should.eql(1077);
                 done();
             }
         });
-        nDocs.should.eql(1076);
     });
     it('dwca-hemiptera_coleccion_iavh should not return errors', function (done) {
         this.timeout(Infinity);
 
-        var nDocs = documentCreator({path: folder3, resourceID: 3}, function(err, resp) {
+        documentCreator({path: folder3, resourceID: 3}, function(err, resp) {
             if(err) {
                 done("error");
             }
             if(resp) {
+                resp.length.should.eql(17370);
                 done();
             }
         });
-        nDocs.should.eql(17369);
+
     });
 });
 

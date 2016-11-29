@@ -28,7 +28,7 @@ processResource(resources);
 function processResource(list) {
     if(list && list.length >=1 ) {
         var resource = list.splice(0,1)[0];
-        logger.info('Importing from: ' + resource.path);
+        logger.info('Importing from: ' + resource.path + ' ' + list.length );
         documentCreator(resource, function(err, resp){
             if(err) {
                 logger.log('error', 'Error processing ' + resource.path, err);
