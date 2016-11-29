@@ -5,7 +5,6 @@
 const fixDate = require('../util/fixDate');
 const logger = require('../log');
 
-
 function filterOccurrence(occurrence) {
     try{
         /*occurrence['group'] = ['humboldt'];
@@ -32,28 +31,36 @@ function filterOccurrence(occurrence) {
             occurrence['minimum_depth'] = +occurrence['minimum_depth'];
 
         if(occurrence['event_date']){
-            let eventDates = occurrence['event_date'].split('/');
-            if(eventDates[0]){
-                let date = fixDate(eventDates[0]);
-                occurrence['eventdate_start'] = date;
-                date = new Date(date);
-                occurrence['days_tart'] = date.getUTCDate();
-                occurrence['month_start'] = date.getUTCMonth()+1;
-                occurrence['year_start'] = date.getUTCFullYear();
+            try {
+                let eventDates = occurrence['event_date'].split('/');
+                if (eventDates >= 3) {
+                    eventDates = [eventDates[2] + '-' + eventDates[1] + '-' + eventDates[0]];
+                }
+                if (eventDates[0] && eventDates[0].length >= 4) {
+                    let date = fixDate(eventDates[0]);
+                    occurrence['eventdate_start'] = date;
+                    date = new Date(date);
+                    occurrence['days_tart'] = date.getUTCDate();
+                    occurrence['month_start'] = date.getUTCMonth() + 1;
+                    occurrence['year_start'] = date.getUTCFullYear();
+                }
+                if (eventDates[1] && eventDates[1].length >= 4) {
+                    let date = fixDate(eventDates[1]);
+                    occurrence['eventdate_end'] = date;
+                    date = new Date(date);
+                    occurrence['day_end'] = date.getUTCDate();
+                    occurrence['month_end'] = date.getUTCMonth() + 1;
+                    occurrence['year_end'] = date.getUTCFullYear();
+                }
             }
-            if(eventDates[1]){
-                let date = fixDate(eventDates[1]);
-                occurrence['eventdate_end'] = date;
-                date = new Date(date);
-                occurrence['day_end'] = date.getUTCDate();
-                occurrence['month_end'] = date.getUTCMonth()+1;
-                occurrence['year_end'] = date.getUTCFullYear();
+            catch(err) {
+                logger.log('warn','Could not convert the date', occurrence);
             }
             delete occurrence['event_date'];
         }
     }
     catch (e){
-        logger.log('warn','Could not properly convert the occurrence', occurrence)
+        logger.log('warn','Could not properly convert the occurrence', occurrence);
     }
 
     return occurrence;
