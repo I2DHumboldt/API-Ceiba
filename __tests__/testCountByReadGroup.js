@@ -11,12 +11,14 @@ describe('Count by read group', function () {
             .end(function(err, res){
                 should.equal(err, null);
                 res.body.count.should.eql(18779);
+                var result = res.body;
+                console.
                 done();
             });
     });
     it('humboldt should not count the restricted occurrences', function (done) {
         request
-            .get('http://localhost:9200/sibdataportal/_count?q=resource.group:humboldt')
+            .get('http://localhost:9200/sibdataportal/_search?q=resource.group:humboldt')
             .end(function(err, res){
                 should.equal(err, null);
                 res.body.count.should.eql(1410);
