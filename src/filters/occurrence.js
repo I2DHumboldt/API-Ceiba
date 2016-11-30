@@ -16,7 +16,7 @@ function filterOccurrence(occurrence) {
             if(occurrence['location']['lat'] && occurrence['location']['lon']) {
                 let lat =  +occurrence['location']['lat'];
                 let lon =  +occurrence['location']['lon'];
-                if(Number.isNaN(lat) || Number.isNaN(lon)) {
+                if(Number.isNaN(lat) || Number.isNaN(lon) || lat < -180 || lat > 180 || lon < -180 || lon > 180 ) {
                     delete occurrence['location'];
                 } else {
                     occurrence['location']['lat'] = lat;
@@ -54,6 +54,8 @@ function filterOccurrence(occurrence) {
                 if (eventDates[0] && eventDates[0].length >= 4) {
                     let date = fixDate(eventDates[0]);
                     occurrence['eventdate_start'] = date;
+                    //console.log(eventDates[0], date)
+
                     date = new Date(date);
                     occurrence['days_tart'] = date.getUTCDate();
                     occurrence['month_start'] = date.getUTCMonth() + 1;
@@ -75,7 +77,8 @@ function filterOccurrence(occurrence) {
         }
     }
     catch (e){
-        logger.log('warn','Could not properly convert the occurrence', occurrence);
+        logger.log('error','Could not properly convert the occurrence', occurrence);
+        return null;
     }
 
     return occurrence;

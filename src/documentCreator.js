@@ -95,16 +95,22 @@ function process(dwac, parameters, callback) {
                     let doc = occurrence[index];
                     if (doc) {
                         doc = filterOccurrence(doc);
-                        doc['sourcefileid'] = sourcefileid;
-                        doc['provider'] = publisher;
-                        doc['resource'] = occResource;
-                        Object.assign(doc.collection, collection);
-                        promises.push(clientElastic.create({
-                            index: _config.get('database.elasticSearch.index'),
-                            type: 'occurrence',
-                            id: rsID + '_' + index,
-                            body: doc
-                        }));
+                        if(doc) {
+                            doc['sourcefileid'] = sourcefileid;
+                            doc['provider'] = publisher;
+                            doc['resource'] = occResource;
+                            Object.assign(doc.collection, collection);
+                            promises.push(clientElastic.create({
+                                index: _config.get('database.elasticSearch.index'),
+                                type: 'occurrence',
+                                id: rsID + '_' + index,
+                                body: doc
+                            }));/*, function (error, response) {
+                                if(error) {
+                                    console.log(index, error);
+                                }
+                            }));*/
+                        }
                     }
                 }
             }
