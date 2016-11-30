@@ -8,7 +8,7 @@
   },
   "scripts": {
     "prepare" : ". dbscripts/reset_database.sh",
-    "import" : "node src/index.js",
+    "import" : "node --max_old_space_size=4096 src/index.js",
     "eslint": "eslint src --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "test-count": "mocha --compilers js:babel-register --require should --reporter mocha-better-spec-reporter __tests__/**/*.js",
