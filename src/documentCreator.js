@@ -83,47 +83,63 @@ function process(dwac, parameters, callback) {
             //Save the resource information
             let promises = [];
             if(resource) {
-                promises.push(clientElastic.create({
+                clientElastic.create({
                     index: _config.get('database.elasticSearch.index'),
                     type: 'resource',
                     method: 'post',
                     id: rsID,
                     body: resource
-                }));
+                }, (result, reject) => {
+                    logger.log('info', 'resource saved' + parameters.path);
+
+                } );
                 if(occurrence) {
                     //Save the occurrences
-                    for (let index = 0; index < occurrence.length; index++) {
-                        let doc = occurrence[index];
-                        if (doc && doc.dwca_id) {
-                            doc = filterOccurrence(doc);
-                            if(doc) {
-                                doc['sourcefileid'] = sourcefileid;
-                                doc['provider'] = publisher;
-                                doc['resource'] = occResource;
-                                Object.assign(doc.collection, collection);
-                                promises.push(clientElastic.create({
-                                    index: _config.get('database.elasticSearch.index'),
-                                    type: 'occurrence',
-                                    id: rsID + '_' + index,
-                                    body: doc
-                                }));
-                            }
-                        }
-                    }
+                    createBulk(occurrence, collection, occResource, publisher, rsID, sourcefileid, callback, 10000, 0, clientElastic);
+
                 }
             }
-
-            Promise.all(promises).then(values =>{
-                callback(null, values);
-            }, reason => {
-                callback(reason, null);
-            });
         }
     }
     catch(error) {
         logger.log('error', 'at function process ' + parameters.path, error);
         callback(error, null);
     }
+}
+
+function createBulk(occurrence, collection, occResource, publisher, rsID, sourcefileid, callback, size, current, clientElastic){
+    let next = Math.min(current + size, occurrence.length);
+    let promises = [];
+    for (let index = current; index < next; index++) {
+        let doc = occurrence[index];
+        if (doc && doc.dwca_id) {
+            doc = filterOccurrence(doc);
+            if(doc) {
+                doc['sourcefileid'] = sourcefileid;
+                doc['provider'] = publisher;
+                doc['resource'] = occResource;
+                Object.assign(doc.collection, collection);
+                promises.push(clientElastic.create({
+                    index: _config.get('database.elasticSearch.index'),
+                    type: 'occurrence',
+                    id: rsID + '_' + index,
+                    body: doc
+                }));
+            }
+        }
+    }
+    Promise.all(promises).then(values => {
+        if(next < occurrence.length)
+            createBulk(occurrence, collection, publisher, occResource, rsID, sourcefileid, callback, size, next, clientElastic);
+        else
+            callback(null, occurrence.length);
+    }, reason => {
+        if(next < occurrence.length)
+            createBulk(occurrence, collection, publisher, occResource, rsID, sourcefileid, callback, size, next, clientElastic);
+        else
+            callback("Fail bulk " + reason, null);
+    });
+
 }
 
 module.exports = create;
