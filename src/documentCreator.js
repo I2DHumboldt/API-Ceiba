@@ -81,7 +81,6 @@ function process(dwac, parameters, callback) {
             }
 
             //Save the resource information
-            let promises = [];
             if(resource) {
                 clientElastic.create({
                     index: _config.get('database.elasticSearch.index'),
@@ -90,7 +89,7 @@ function process(dwac, parameters, callback) {
                     id: rsID,
                     body: resource
                 }, (result, reject) => {
-                    logger.log('info', 'resource saved' + parameters.path);
+                    logger.log('info', 'resource saved ' + parameters.path);
 
                 } );
                 if(occurrence) {
@@ -98,7 +97,16 @@ function process(dwac, parameters, callback) {
                     createBulk(occurrence, collection, occResource, publisher, rsID, sourcefileid, callback, 10000, 0, clientElastic);
 
                 }
+                else{
+                    //No occurrences to save
+                    callback("No occurrences found!", 0);
+                }
             }
+            else{
+                //No resources to save
+                callback('No resouces found!', 0);
+            }
+
         }
     }
     catch(error) {
