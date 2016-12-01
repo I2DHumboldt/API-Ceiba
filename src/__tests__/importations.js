@@ -14,7 +14,7 @@ describe('Create document', function () {
                 done("error");
             }
             if(resp) {
-                resp.length.should.eql(335);
+                resp.should.eql(334);
                 done();
             }
         });
@@ -26,7 +26,7 @@ describe('Create document', function () {
                 done("error");
             }
             if(resp) {
-                resp.length.should.eql(1077);
+                resp.should.eql(1076);
                 done();
             }
         });
@@ -39,7 +39,7 @@ describe('Create document', function () {
                 done("error");
             }
             if(resp) {
-                resp.length.should.eql(17370);
+                resp.should.eql(17369);
                 done();
             }
         });
