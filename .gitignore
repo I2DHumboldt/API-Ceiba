@@ -6,3 +6,4 @@
 .idea/vcs.xml
 node_modules
 logs/ceiba-data-importer.log
+/data-test/excluded/
