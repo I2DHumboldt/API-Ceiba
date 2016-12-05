@@ -20,7 +20,8 @@ const _config = require('../config/config-convict');
 const Promise = require('promise');
 const randomstring = require("randomstring");
 
-function create(parameters, callback){
+function create(parameters, callback, options){
+    let opt = Object.assign({}, {onlyZip: true}, options);
     try{
         let dwac = null;
         if(fs.existsSync(parameters.path+"dwca.zip")){
@@ -31,12 +32,17 @@ function create(parameters, callback){
             );
             return dwac.then(result => process(result, parameters, callback));
         } else {
-            dwac = dwacParser.loadFromFolder(parameters.path, {
-                'occurrence.txt':[{'key':'occurrence', 'mapper': occurrenceMapper}],
-                'eml.xml':[{'key':'occResource', 'mapper': emlMapper},
-                    {'key':'resource', 'mapper':resourceMapper}]}
-            );
-            process(dwac, parameters, callback);
+            if(!opt.onlyZip) {
+                dwac = dwacParser.loadFromFolder(parameters.path, {
+                    'occurrence.txt':[{'key':'occurrence', 'mapper': occurrenceMapper}],
+                    'eml.xml':[{'key':'occResource', 'mapper': emlMapper},
+                        {'key':'resource', 'mapper':resourceMapper}]}
+                );
+                process(dwac, parameters, callback);
+            } else {
+                callback("No dwca.zip file" , 0);
+            }
+
         }
     }
     catch(generalError){
@@ -123,6 +129,7 @@ function createBulk(occurrence, collection, occResource, publisher, rsID, source
         if (doc && doc.dwca_id) {
             doc = filterOccurrence(doc);
             if(doc) {
+                doc['group'] = occResource['group'];
                 doc['sourcefileid'] = sourcefileid;
                 doc['provider'] = publisher;
                 doc['resource'] = occResource;

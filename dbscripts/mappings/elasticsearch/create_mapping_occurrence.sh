@@ -109,6 +109,9 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 					}
 				}
 			},
+			"group": {
+                "type": "keyword"
+            },
 			"dwca_id":  {
 				"type": "string",
 				"index": "analyzed",
@@ -690,6 +693,7 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 				"type": "object",
 				"properties": {
 					"id": {"type" : "integer"},
+					"group": {"type": "keyword"},
 					"name" :  {
 						"type": "string",
 						"index": "analyzed",
@@ -909,25 +913,7 @@ curl -XPUT "http://$ESDBHOST/$ESINDEX/_mapping/occurrence" -d '
 								"analyzer": "spanish_search_analyzer"
 							}
 						}
-					},
-					"group": {
-                        "type": "string",
-                        "index": "analyzed",
-                        "fields": {
-                            "untouched" : {
-                                "type": "string",
-                                "index": "not_analyzed"
-                            },
-                            "exactWords": {
-                                "type": "string",
-                                "analyzer": "string_lowercase"
-                            },
-                            "spanish": {
-                                "type": "string",
-                                "analyzer": "spanish_search_analyzer"
-                            }
-                        }
-                    }
+					}
 				}
 			},
 			"institution": {
